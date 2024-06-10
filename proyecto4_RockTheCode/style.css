@@ -1,0 +1,98 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+:root {
+
+  --white: rgb(243, 243, 243);
+  --black: #181818;
+  --html: rgb(255, 136, 0);
+  --css: rgb(5, 129, 231);
+  --js: rgb(255, 217, 0);
+  --vite: rgba(189, 52, 254, 1);
+  --gradiant--radial: radial-gradient(circle, rgba(189, 52, 254, 1) 16%, #41d1ff 98%);
+  --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);;
+  --dark-grey: rgb(104, 103, 103);
+  --light-grey: rgb(248, 248, 248);
+  --blue: #41d1ff;
+  --text:"Encode Sans SC",
+    sans-serif;
+  --title: "M PLUS 1 Code",
+    monospace;
+
+}
+
+i {
+
+  font-size: 1.8rem;
+
+}
+
+
+
+.flex-container {
+
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+}
+
+
+body {
+
+  width: 100%;
+  height: 100dvh;
+
+  background: var(--black);
+}
+
+.section-articles {
+
+  margin: 200px 0;
+  gap: 20px;
+  width: 90%;
+  max-width: 1500px;
+    
+}
+
+.html, .html img {
+
+ border-radius: 100%;
+ border: 1px solid var(--html);
+box-shadow: 0px 4px 10px -2px var(--html);
+
+}
+
+.css, .css img  {
+
+  border-radius: 100%;
+    border: 1px solid var(--css);
+    box-shadow: 0px 4px 10px -2px var(--css);
+}
+
+.js, .js img  {
+
+  border-radius: 100%;
+    border: 1px solid var(--js);
+    box-shadow: 0px 4px 10px -2px var(--js);
+
+}
+
+.vite, .vite img {
+
+  border-radius: 100%;
+    border: 1px solid var(--vite);
+    box-shadow: 0px 4px 10px -2px var(--vite);
+}
