@@ -11,7 +11,7 @@
      border-bottom-right-radius: 25%;
      border-bottom-left-radius: 2%;
 
-     box-shadow: 0px 4px 10px -2px var(--blue);
+     box-shadow: 0px 0px 10px -2px var(--blue);
 
 }
 
@@ -20,6 +20,7 @@
      font-size: 30px;
      font-family: var(--title);
      background: var(--gradiant--linear);
+     -webkit-background-clip: text;
      color: transparent;
      background-clip: text;
 }

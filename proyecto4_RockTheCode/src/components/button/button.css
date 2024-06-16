@@ -1,37 +1,49 @@
 button {
-
+     
      border: none;
      background-color: transparent;
      box-shadow: none;
 }
 
 .circle {
-
+     
      position: relative; 
      border-radius:50%;
-     background: var(--gradiant--linear);
+     border:  1px solid var(--vite);
+   
      opacity: 70%;
-     height:46px;
+     height:48px;
      width: 46px;
+     box-shadow:0px 0px 30px 2px var(--vite);
+     transition: .4s;
+
+     &:hover  {
+
+          background-color: var(--blue);
+     }
      
 }
 .circle button {
+     cursor: pointer;
      border-radius: 50%;
      height:fit-content;
-    margin: 5px;
     
-  
 
 
 }
+
+
 
 .circle i {
      color: var(--vite);
      font-size: 3em;
      position: absolute;
-     top: 3px;
-     left: 3px;
+     top: 2px;
+     left: 2px;
+     cursor: pointer;
 
+
+    
      
      
 }

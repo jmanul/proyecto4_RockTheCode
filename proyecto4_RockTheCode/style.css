@@ -18,11 +18,13 @@
   --vite: rgba(189, 52, 254, 1);
   --gradiant--radial: radial-gradient(circle, #bd34fe 16%, #41d1ff 98%);
   --gradiant--radial2:radial-gradient(circle, rgba(189, 52, 254, 1) 16%, rgba(65, 209, 255, 0.6082808123249299) 66%);
+  --gradiant--radial3:radial-gradient(circle, rgba(219,68,254,0.2862394957983193) 5%, rgba(65,209,255,0) 95%);
   --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   ;
   --dark-grey: rgb(104, 103, 103);
   --light-grey: rgb(248, 248, 248);
   --blue: #41d1ff;
+  --blue--light: #41d0ff64;
   --text: "Encode Sans SC",
     sans-serif;
   --title: "M PLUS 1 Code",
@@ -64,7 +66,7 @@ body {
   padding: 20px 0;
   margin: 50px 0;
   gap: 20px;
-  width: 1090px;
+  width: 1100px;
   overflow:hidden;
   flex-wrap: nowrap;
   justify-content:flex-start;
@@ -72,10 +74,11 @@ body {
 }
 
 .proyect-container {
-  margin-top: 100px;
-  z-index: -1;
-  background: var(--gradiant--radial2);
+  margin: 100px 0;
+  background: var(--gradiant--radial3);
   border-radius:10px;
+  border: 1px solid var(--vite);
+  box-shadow:inset 0px 0px 70px -20px var(--vite);
   width: 90%;
   max-width: 1500px;
   justify-content: space-between;
@@ -87,6 +90,7 @@ h2 {
     font-size: 50px;
       font-family: var(--title);
       background: var(--gradiant--radial);
+      -webkit-background-clip: text;
       color: transparent;
       background-clip: text;
       
