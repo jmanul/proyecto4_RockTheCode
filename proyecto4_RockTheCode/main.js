@@ -1,4 +1,5 @@
 import { createArticle } from './src/components/article/article';
+import { createButton } from './src/components/button/button';
 import './style.css'
 
 let proyects = [
@@ -56,11 +57,17 @@ footer.className = 'flex-container';
 document.body.append(footer);
 
 
-
-
+const proyectTitle = document.createElement('h2');
+proyectTitle.innerText = 'Proyectos';
+main.append(proyectTitle);
+const proyectContainer = document.createElement('div');
+proyectContainer.classList.add('flex-container', 'proyect-container');
+main.append(proyectContainer);
 const sectionArticles = document.createElement('section');
 sectionArticles.classList.add('flex-container', 'section-articles');
-main.append(sectionArticles);
+createButton(proyectContainer, `<i class="bi bi-arrow-left-circle-fill"></i>`, 'right', 'circle');
+proyectContainer.append(sectionArticles);
+createButton(proyectContainer, `<i class="bi bi-arrow-right-circle-fill"></i>`, 'right', 'circle');
 
 const createSection = (list) => {
   
@@ -75,3 +82,4 @@ const createSection = (list) => {
 
 
 createSection(proyects);
+

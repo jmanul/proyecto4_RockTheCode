@@ -1,10 +1,10 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  
 
 }
 
@@ -16,12 +16,14 @@
   --css: rgb(5, 129, 231);
   --js: rgb(255, 217, 0);
   --vite: rgba(189, 52, 254, 1);
-  --gradiant--radial: radial-gradient(circle, rgba(189, 52, 254, 1) 16%, #41d1ff 98%);
-  --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);;
+  --gradiant--radial: radial-gradient(circle, #bd34fe 16%, #41d1ff 98%);
+  --gradiant--radial2:radial-gradient(circle, rgba(189, 52, 254, 1) 16%, rgba(65, 209, 255, 0.6082808123249299) 66%);
+  --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  ;
   --dark-grey: rgb(104, 103, 103);
   --light-grey: rgb(248, 248, 248);
   --blue: #41d1ff;
-  --text:"Encode Sans SC",
+  --text: "Encode Sans SC",
     sans-serif;
   --title: "M PLUS 1 Code",
     monospace;
@@ -59,40 +61,72 @@ body {
 }
 
 .section-articles {
-
-  margin: 200px 0;
+  padding: 20px 0;
+  margin: 50px 0;
   gap: 20px;
+  width: 1090px;
+  overflow:hidden;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+
+}
+
+.proyect-container {
+  margin-top: 100px;
+  z-index: -1;
+  background: var(--gradiant--radial2);
+  border-radius:10px;
   width: 90%;
   max-width: 1500px;
-    
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
-.html, .html img {
-
- border-radius: 100%;
- border: 1px solid var(--html);
-box-shadow: 0px 4px 10px -2px var(--html);
-
+h2 {
+    padding-top: 100px;
+    font-size: 50px;
+      font-family: var(--title);
+      background: var(--gradiant--radial);
+      color: transparent;
+      background-clip: text;
+      
 }
 
-.css, .css img  {
+main {
+
+  flex-direction: column;
+}
+
+.html,
+.html img {
 
   border-radius: 100%;
-    border: 1px solid var(--css);
-    box-shadow: 0px 4px 10px -2px var(--css);
-}
-
-.js, .js img  {
-
-  border-radius: 100%;
-    border: 1px solid var(--js);
-    box-shadow: 0px 4px 10px -2px var(--js);
+  border: 1px solid var(--html);
+  box-shadow: 0px 4px 10px -2px var(--html);
 
 }
 
-.vite, .vite img {
+.css,
+.css img {
 
   border-radius: 100%;
-    border: 1px solid var(--vite);
-    box-shadow: 0px 4px 10px -2px var(--vite);
+  border: 1px solid var(--css);
+  box-shadow: 0px 4px 10px -2px var(--css);
+}
+
+.js,
+.js img {
+
+  border-radius: 100%;
+  border: 1px solid var(--js);
+  box-shadow: 0px 4px 10px -2px var(--js);
+
+}
+
+.vite,
+.vite img {
+
+  border-radius: 100%;
+  border: 1px solid var(--vite);
+  box-shadow: 0px 4px 10px -2px var(--vite);
 }
