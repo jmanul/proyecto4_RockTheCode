@@ -7,7 +7,7 @@ export const createArticle = (site, item) => {
 
 
      const article = document.createElement('article');
-     article.id = item.title
+     article.id = item.id
      article.classList.add('article');
      site.append(article);
      const a = document.createElement('a');
