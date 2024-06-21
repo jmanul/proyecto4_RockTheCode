@@ -58,14 +58,18 @@ button {
 
           background-color: var(--white);
           box-shadow:0px 0px 30px 2px var(--black);  
+          pointer-events: none;
+          cursor: default;
      }
 
      &:hover i {
-
+          
+          pointer-events: none;
           cursor: default;
      }
 
      &:hover butto{
-          display: none;
+          pointer-events: none;
+          cursor: default;
      }
 }

@@ -85,9 +85,9 @@ const createSection = (list) => {
 };
 
 let x = 0;
-let y = 0;
 let totalMov = 0;
-let cont = 0;
+let widthProyects = 0;
+let widthArticle = 0;
 
 const initSlider = () => {
  
@@ -98,7 +98,13 @@ const initSlider = () => {
 
     right.classList.toggle('off-button');
   }
- 
+
+  widthProyects = sectionArticles.getBoundingClientRect();
+   const articles = [...document.querySelectorAll('.article')];
+   widthArticle = articles[0].getBoundingClientRect();
+  console.log(widthProyects.width);
+  console.log(widthArticle.width);
+  
 };
 
 createSection(proyects);
