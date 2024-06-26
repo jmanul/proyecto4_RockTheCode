@@ -3,6 +3,14 @@ import { createButton } from './src/components/button/button';
 import './style.css'
 
 let proyects = [
+  { id :'pinterest',
+    title: 'Pinterest',
+    technologies: [{
+      icon: "/html.svg ", name: 'html'
+    }, { icon: "/css.svg ", name: 'css' }, { icon: '/js.svg', name: 'js' }, { icon: '/vite.svg', name: 'vite' }],
+    deploy: 'https://proyecto3rockthecode.netlify.app',
+    image: 'https://res.cloudinary.com/dn6utw1rl/image/upload/v1717787421/Captura_desde_2024-06-07_21-09-59_bjagkc.png'
+  },
 
   { id: 'motherEarth',
     title: 'Mother Earth',
@@ -36,14 +44,6 @@ let proyects = [
     }, { icon: "/css.svg ", name: 'css' }],
     deploy: 'https://proyecto1-josemanuelsanchezballester.netlify.app',
     image: 'https://res.cloudinary.com/dn6utw1rl/image/upload/v1717785956/Captura_desde_2024-06-07_20-45-15_dgxouc.png'
-  },  {
-    id :'pinterest',
-    title: 'Pinterest',
-    technologies: [{
-      icon: "/html.svg ", name: 'html'
-    }, { icon: "/css.svg ", name: 'css' }, { icon: '/js.svg', name: 'js' }, { icon: '/vite.svg', name: 'vite' }],
-    deploy: 'https://proyecto3rockthecode.netlify.app',
-    image: 'https://res.cloudinary.com/dn6utw1rl/image/upload/v1717787421/Captura_desde_2024-06-07_21-09-59_bjagkc.png'
   }
 ]
 
@@ -89,10 +89,13 @@ let totalMov = 0;
 let widthProyects = 0;
 let widthArticle = 0;
 let widthMov = 0;
+let lengthEnd = 0;
+
+
 
 const initSlider = () => {
  
-  if (cont == proyects.length - 1) {
+  if (cont == proyects.length - lengthEnd) {
 
     left.classList.toggle('off-button');
   }else if (cont < 2) {
@@ -103,46 +106,34 @@ const initSlider = () => {
   widthProyects = sectionArticles.getBoundingClientRect();
    const articles = [...document.querySelectorAll('.article')];
    widthArticle = articles[0].getBoundingClientRect();
-  console.log(widthProyects.width);
-  console.log(widthArticle.width);
-
-  let p = widthProyects.width;
-  let a = widthArticle.width + 20;
-  let t = p / a;
-  console.log(t);
-
-  
-  
+   widthMov = widthArticle.width + 20;
+  lengthEnd = Math.round(widthProyects.width / widthMov);
+ 
 };
 
 createSection(proyects);
 
-
 initSlider();
 
 const contSlider = (mov) => {
-  console.log(mov);
+  
   
   initSlider();
 
- if (mov < 0 && cont < proyects.length - 1){
-  cont++;
-  console.log(cont);
-  
-  totalMov = cont * mov;
+ if (mov < 0 && cont < proyects.length - lengthEnd){
 
-  console.log(totalMov);
+  cont++;
+
+  totalMov = cont * mov;
 
   right.classList.remove('off-button');
 
  }else if (mov > 0 && cont > 0) {
   
   cont--;
-  console.log(cont);
-
+ 
   totalMov = -(cont * mov);
   
-  console.log(totalMov);
   left.classList.remove('off-button');
  
  }
@@ -161,16 +152,12 @@ const runSlider = (TotalMov) => {
      
       item.style.transform = `translateX(${TotalMov}px)`;
       
-     
-
     
   }
  
 }
-
-console.log((widthArticle));
   
 
-left.addEventListener('click', () => contSlider(`-${widthArticle.width + 20} `));
-right.addEventListener('click', () => contSlider(`${widthArticle.width + 20} `));
+left.addEventListener('click', () => contSlider(`-${widthMov} `));
+right.addEventListener('click', () => contSlider(`${widthMov} `));
 

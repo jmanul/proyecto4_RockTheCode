@@ -62,14 +62,50 @@ button {
           cursor: default;
      }
 
-     &:hover i {
+     &:hover .circle, button {
           
           pointer-events: none;
           cursor: default;
      }
 
-     &:hover butto{
-          pointer-events: none;
-          cursor: default;
-     }
 }
+
+@media (max-width: 50px){
+  
+     .circle {
+     
+          height:28px;
+          width: 26px;
+          
+     }
+
+     .circle i {
+          color: var(--vite);
+          font-size: 1.5em;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          cursor: pointer;    
+     }
+   }
+
+   @media (max-width: 650px){
+  
+     .circle {
+     
+          position: absolute;
+          bottom: 2rem; 
+          
+          
+     }
+     #left {
+
+          left: 2rem;
+     }
+     #right {
+
+          right: 2rem;
+     }
+
+     
+   }
