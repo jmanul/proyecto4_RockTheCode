@@ -84,17 +84,18 @@ const createSection = (list) => {
  
 };
 
-let x = 0;
+let cont = 0;
 let totalMov = 0;
 let widthProyects = 0;
 let widthArticle = 0;
+let widthMov = 0;
 
 const initSlider = () => {
  
-  if (x == proyects.length - 1) {
+  if (cont == proyects.length - 1) {
 
     left.classList.toggle('off-button');
-  }else if (x < 2) {
+  }else if (cont < 2) {
 
     right.classList.toggle('off-button');
   }
@@ -104,6 +105,13 @@ const initSlider = () => {
    widthArticle = articles[0].getBoundingClientRect();
   console.log(widthProyects.width);
   console.log(widthArticle.width);
+
+  let p = widthProyects.width;
+  let a = widthArticle.width + 20;
+  let t = p / a;
+  console.log(t);
+
+  
   
 };
 
@@ -112,23 +120,27 @@ createSection(proyects);
 
 initSlider();
 
-const contSlider = (mov) => { initSlider();
- if (mov < 0 && x < proyects.length - 1){
-  x++;
-  console.log(x);
+const contSlider = (mov) => {
+  console.log(mov);
   
-  totalMov = x * mov;
+  initSlider();
+
+ if (mov < 0 && cont < proyects.length - 1){
+  cont++;
+  console.log(cont);
+  
+  totalMov = cont * mov;
 
   console.log(totalMov);
 
   right.classList.remove('off-button');
 
- }else if (mov > 0 && x > 0) {
+ }else if (mov > 0 && cont > 0) {
   
-  x--;
-  console.log(x);
+  cont--;
+  console.log(cont);
 
-  totalMov = -(x * mov);
+  totalMov = -(cont * mov);
   
   console.log(totalMov);
   left.classList.remove('off-button');
@@ -156,9 +168,9 @@ const runSlider = (TotalMov) => {
  
 }
 
-
+console.log((widthArticle));
   
 
-left.addEventListener('click', () => contSlider('-370'));
-right.addEventListener('click', () => contSlider('370'));
+left.addEventListener('click', () => contSlider(`-${widthArticle.width + 20} `));
+right.addEventListener('click', () => contSlider(`${widthArticle.width + 20} `));
 
