@@ -161,3 +161,10 @@ const runSlider = (TotalMov) => {
 left.addEventListener('click', () => contSlider(`-${widthMov} `));
 right.addEventListener('click', () => contSlider(`${widthMov} `));
 
+//? mensaje de fin de pagina (footer)
+
+
+const footerMaking = document.createElement('div');
+footerMaking.classList.add('flex-container', 'making');
+footer.append(footerMaking);
+footerMaking.innerHTML = `<span class="flex-container"><strong>Hecho por José Manuel Sánchez</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
