@@ -10,18 +10,18 @@ export const createArticle = (site, item) => {
      article.id = item.id
      article.classList.add('article');
      site.append(article);
+     const divImg = document.createElement('div');
+     divImg.className = 'divImg';
+     divImg.style.backgroundImage = `url(${item.image})`;
+     article.append(divImg);
      const a = document.createElement('a');
      article.append(a);
      a.href = item.deploy;
      a.target = '_blank';
-     const divImg = document.createElement('div');
-     divImg.className = 'divImg';
-     divImg.style.backgroundImage = `url(${item.image})`;
-     a.append(divImg);
      const title = document.createElement('h3');
      title.className = 'title';
      title.innerText = item.title;
-     article.append(title);
+     a.append(title);
      const divTechnologies = document.createElement('div');
      divTechnologies.classList.add('flex-container', 'div-technologies');
      article.append(divTechnologies);
