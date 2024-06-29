@@ -21,6 +21,7 @@
   --gradiant--radial3: radial-gradient(circle, #db44fe49 5%, rgba(65, 209, 255, 0) 95%);
   --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   --gradiant--linear2: linear-gradient(0deg,#db44fe49  11%, rgba(231, 229, 229, 0) 90%);
+  --linear--gradiant:linear-gradient(0deg, rgba(65, 209, 255, 0.9836309523809523) -100%, rgba(0, 21, 36, 0.9570203081232493) 20%);
   ;
   --dark-grey: rgb(104, 103, 103);
   --light-grey: rgb(248, 248, 248);
@@ -106,11 +107,11 @@ h2 {
 }
 
 header {
-
+    flex-direction: column;
     width: 100%;
     height: auto;
     box-shadow:  0px -5px 20px 5px var(--css);
-      background: var(--gradiant--linear2);
+      background: var(--gradiant--radial3);
     /*background-image: url(./public/proyect-backgraund.svg);
     
       background-position: center center;
@@ -124,19 +125,32 @@ header {
 }
 
 h1 {
-
+margin: 20px 0;
   font-family: var(--title);
-  font-size: 100px;
+  font-size: 50px;
   font-weight: bold;
-  background: linear-gradient(178deg, #c132e1, #000000);
-  text-shadow: 2px 1px 1px var(--black);
+  background: var(--css);
+ text-shadow: 2px 1px 1px rgba(155, 136, 136, 0.094);
   
   color:transparent;
   -webkit-background-clip: text;
     background-clip: text;
- 
-  
- 
+    filter: drop-shadow(0px -1px 3px var(--vite));
+    
+}
+
+.foto {
+  margin: 20px 0;
+  background:var(--gradiant--linear4);
+  height: 200px;
+  width:200px;
+  border-radius: 50%;
+  box-shadow: 10px 0px 10px -5px var(--blue);
+}
+
+.foto-perfil {
+
+  height: 100%;
 }
 
 main {

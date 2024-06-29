@@ -56,8 +56,12 @@ header.id = 'header';
 header.className = 'flex-container';
 document.body.insertBefore(header, main);
 const titleName = document.createElement('h1');
-titleName.innerText = 'JOSE MANUEL SANCHEZ';
+titleName.innerText = 'Jose Manuel Sanchez';
 header.append(titleName)
+const foto = document.createElement('div');
+foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
+foto.className = 'foto';
+header.append(foto);
 const footer = document.createElement('footer');
 footer.id = 'footer';
 footer.className = 'flex-container';
@@ -87,6 +91,7 @@ const createSection = (list) => {
 
     createArticle(sectionArticles , article);
   };
+
  
 };
 
@@ -161,6 +166,11 @@ const runSlider = (TotalMov) => {
     
   }
  
+}
+
+const onText = () => {
+
+  console.log('hola');
 }
   
 

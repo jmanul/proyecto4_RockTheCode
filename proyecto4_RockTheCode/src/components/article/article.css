@@ -1,7 +1,7 @@
 
 .divImg {
 
-
+     width: 100%;
      height: 70%;
      border-top-left-radius: 2%;
      border-top-right-radius: 2%;
@@ -15,13 +15,35 @@
 
 }
 
+.text-flow {
+     position: absolute;
+     top: 0;
+     border-top-left-radius: 2%;
+     border-top-right-radius: 2%;
+     background:var(--css);
+     opacity: 0.5;
+     width: 100%;
+     height: 70%;
+}
+
+.text-flow > p {
+
+     color: var(--white);
+     font-size:20px;
+     font-weight: bold;
+     font-family: var(--text);
+
+
+}
+
 .article {
+     position: relative;
       flex: 0 0 auto;
      cursor: pointer;
 
      width: 350px;
      height: 460px;
-     background: linear-gradient(0deg, rgba(65, 209, 255, 0.9836309523809523) -100%, rgba(0, 21, 36, 0.9570203081232493) 20%);
+     background: var(--linear--gradiant);
 
      border-top-left-radius: 2%;
      border-top-right-radius: 2%;
@@ -74,6 +96,8 @@
      width: 100%;
      padding: 3px;
 }
+
+
 
 
 

@@ -1,5 +1,17 @@
 import { createList } from '../list/list';
-import './article.css'
+import './article.css';
+
+const onText = (item) => {
+     
+     const divText = document.getElementById(item.id);
+     divText.classList.add('opacity-text');
+     const textContainer = document.createElement('div');
+     textContainer.className = 'text-flow';
+     divText.append(textContainer);
+     const text = document.createElement('p');
+     text.innerText = 'que pasa tio';
+     textContainer.append(text);
+}
 
 export const createArticle = (site, item) => {
      
@@ -25,6 +37,8 @@ export const createArticle = (site, item) => {
      const divTechnologies = document.createElement('div');
      divTechnologies.classList.add('flex-container', 'div-technologies');
      article.append(divTechnologies);
-     createList(divTechnologies, item.technologies , item.title);
+     createList(divTechnologies, item.technologies, item.title);
+     
+     divImg.addEventListener('click', () => onText(item));
 
 }

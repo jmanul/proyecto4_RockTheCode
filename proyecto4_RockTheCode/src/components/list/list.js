@@ -6,7 +6,7 @@ export const createList = (site , list , name) => {
      
      const ulList = document.createElement('ul');
      ulList.className = 'flex-container';
-     ulList.id = name;
+     ulList.id = `${name}-list`;
      site.append(ulList);
 
      for (let i = 0; i < list.length; i++) {
