@@ -1,7 +1,38 @@
 import { createList } from '../list/list';
 import './article.css';
 
+const resetArticle = (item) => {
+     
+     const articles = [...document.querySelectorAll('.article')];
+
+     for (const article of articles) {
+
+         
+          if (article.classList.value == 'article opacity-text') {
+
+               article.className = 'article';
+
+               const itemActiv = document.querySelector('.text-flow');
+
+               itemActiv.className = 'text-flow-reverse';
+
+               setTimeout(() => {
+                    itemActiv.remove();
+               }, 3000);
+               
+             
+
+              
+          }
+
+     }
+
+     onText(item);
+}
+
 const onText = (item) => {
+
+  
      
      const divText = document.getElementById(item.id);
      divText.classList.add('opacity-text');
@@ -39,6 +70,6 @@ export const createArticle = (site, item) => {
      article.append(divTechnologies);
      createList(divTechnologies, item.technologies, item.title);
      
-     divImg.addEventListener('click', () => onText(item));
+     divImg.addEventListener('click', () => resetArticle(item));
 
 }
