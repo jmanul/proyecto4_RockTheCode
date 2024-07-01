@@ -1,38 +1,47 @@
 import { createList } from '../list/list';
 import './article.css';
 
+const clearText = (element) => {
+
+     element.className = 'article';
+
+     const itemActiv = document.querySelector('.text-flow');
+
+     itemActiv.className = 'text-flow-reverse';
+
+     setTimeout(() => {
+          itemActiv.remove();
+     }, 3000);
+}
+
 const resetArticle = (item) => {
      
      const articles = [...document.querySelectorAll('.article')];
 
-     for (const article of articles) {
+     const divText = document.getElementById(item.id);
 
-         
-          if (article.classList.value == 'article opacity-text') {
+     if (divText.classList.value == 'article opacity-text') {
 
-               article.className = 'article';
+          clearText(divText);
 
-               const itemActiv = document.querySelector('.text-flow');
+          return;
 
-               itemActiv.className = 'text-flow-reverse';
+     } else {
+          for (const article of articles) {
 
-               setTimeout(() => {
-                    itemActiv.remove();
-               }, 3000);
-               
-             
+               if (article.classList.value == 'article opacity-text') {
+                  
+                    clearText(article);
+               }
 
-              
           }
 
+          onText(item);
      }
-
-     onText(item);
+  
 }
 
 const onText = (item) => {
-
-  
      
      const divText = document.getElementById(item.id);
      divText.classList.add('opacity-text');
@@ -40,15 +49,12 @@ const onText = (item) => {
      textContainer.className = 'text-flow';
      divText.append(textContainer);
      const text = document.createElement('p');
-     text.innerText = 'que pasa tio';
+     text.innerText = `${item.description}`;
      textContainer.append(text);
 }
 
 export const createArticle = (site, item) => {
      
-     
-
-
      const article = document.createElement('article');
      article.id = item.id
      article.classList.add('article');
@@ -57,8 +63,11 @@ export const createArticle = (site, item) => {
      divImg.className = 'divImg';
      divImg.style.backgroundImage = `url(${item.image})`;
      article.append(divImg);
+     const divTop = document.createElement('div');
+     divTop.classList.add('div-top', 'flex-container');
+     article.append(divTop);
      const a = document.createElement('a');
-     article.append(a);
+     divTop.append(a);
      a.href = item.deploy;
      a.target = '_blank';
      const title = document.createElement('h3');
@@ -67,7 +76,7 @@ export const createArticle = (site, item) => {
      a.append(title);
      const divTechnologies = document.createElement('div');
      divTechnologies.classList.add('flex-container', 'div-technologies');
-     article.append(divTechnologies);
+     divTop.append(divTechnologies);
      createList(divTechnologies, item.technologies, item.title);
      
      divImg.addEventListener('click', () => resetArticle(item));

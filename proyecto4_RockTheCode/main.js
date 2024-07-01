@@ -5,6 +5,7 @@ import './style.css'
 let proyects = [
   { id :'pinterest',
     title: 'Pinterest',
+    description:'Replica y rebranding de Pinterest, creado en Vite usando estilos modulares y componentes, utilizando Javascript y la Api de Unsplash para dotar de funcionalidad el buscador de imagenes.',
     technologies: [{
       icon: "/html.svg ", name: 'html'
     }, { icon: "/css.svg ", name: 'css' }, { icon: '/js.svg', name: 'js' }, { icon: '/vite.svg', name: 'vite' }],
@@ -14,6 +15,7 @@ let proyects = [
 
   { id: 'motherEarth',
     title: 'Mother Earth',
+    description: 'Mother Earth esta creado a partir del diseño hecho en figma por Nickelfox Design, este proyecto esta realizado utilizando unicamente HTML5 y CSS3.',
     technologies: [{
       icon: "/html.svg ", name: 'html'
     }, { icon: "/css.svg", name: 'css'}],
@@ -22,6 +24,7 @@ let proyects = [
   },  {
     id : 'icon',
     title: 'I.C.O.N.',
+    description: 'Replica de la pagina oficial de I.C.O.N., este proyecto esta realizado utilizando unicamente HTML5 y CSS3. ',
     technologies: [{
       icon: "/html.svg ", name: 'html'
     }, { icon: "/css.svg ", name: 'css' }],
@@ -30,6 +33,7 @@ let proyects = [
   },  {
     id: 'planetaHuerto',
     title: 'Planeta Huerto',
+    description: 'Proyecto basado en la pagina de Planeta Huerto, incluye sistema de filtro de busqueda, se pueden filtrar productos teniendo en cuenta marca , precios y palabras introducidas en el buscador, la funcionalidad de la pagina esta realizada con Javascript.',
     technologies: [{
       icon: "/html.svg ", name: 'html'
     }, { icon: "/css.svg ", name: 'css' }, { icon: '/js.svg', name: 'js' }, { icon: '/vite.svg', name: 'vite' }],
@@ -39,6 +43,7 @@ let proyects = [
   },  {
     id : 'pandora',
     title: 'Pandora',
+    description: 'Replica de la pagina de Pandora, realizada unicamente usando HTML5 y CSS3 .',
     technologies: [{
       icon: "/html.svg ", name: 'html'
     }, { icon: "/css.svg ", name: 'css' }],
@@ -166,11 +171,6 @@ const runSlider = (TotalMov) => {
     
   }
  
-}
-
-const onText = () => {
-
-  console.log('hola');
 }
   
 
