@@ -60,7 +60,7 @@ i {
 body {
 
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
 
   background: var(--black);
 }
@@ -82,7 +82,7 @@ body {
 
 .proyect-container {
   position: relative;
-  margin: 100px 0;
+  margin: 50px 0;
   /*background: var(--gradiant--radial3);
   border-radius: 10px;
   border: 1px solid var(--vite);
@@ -162,6 +162,28 @@ main {
   
 }
 
+.section-info {
+  position: relative;
+  z-index: 1;
+  max-width: 1500px;
+  margin-top: 150px;
+  background:var(--light-grey);
+  filter: opacity(0.5);
+  border-right: #bd34fe 3px solid;
+  border-bottom: #bd34fe 3px solid;
+  width: 80%;
+  height: 300px;
+  border-radius:10px;
+}
+
+.container-info {
+  max-width: 1500px;
+  background: var(--dark--green);
+  height: 99%;
+  width: 99%;
+  border-radius: 10px;
+}
+
 .proyect-background {
 
   width: 100%;
@@ -221,13 +243,26 @@ main {
 
 footer {
 
-
-  
   width: 100%;
   height: auto;
-
+  padding-top: 30px;
   background: var(--gradiant--linear2);
   box-shadow: 0px 0px 25px -15px var(--css);
+
+}
+
+.div-rrss div{
+
+  margin: 30px 10px;
+  width: 50px;
+   height: 30px;
+}
+
+.div-rrss div img {
+
+  width:100%;
+  border-radius: 50%;
+  border: 5px solid var(--linear--gradiant);
 
 }
 
@@ -310,5 +345,11 @@ footer {
     max-width: 300px;
 
   }
+
+    .div-rrss div {
+  
+      width: 30px;
+    
+    }
 
 }

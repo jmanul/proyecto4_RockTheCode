@@ -1,5 +1,6 @@
 import { createArticle } from './src/components/article/article';
 import { createButton } from './src/components/button/button';
+import { createList } from './src/components/list/list';
 import './style.css'
 
 let proyects = [
@@ -52,6 +53,25 @@ let proyects = [
   }
 ]
 
+let rrss = [
+
+  {
+    url: 'https://discord.com/channels/jmanul77#6352',
+    icon: '/discord.svg',
+    name: 'discord'
+  },
+  {
+    url: 'https://www.github.com/jmanul',
+    icon: '/git-hub.svg',
+    name: 'git-hub'
+  },
+  {
+    url: 'https://www.linkedin.com/in/jmanul',
+    icon: '/linkedin.svg',
+    name: 'linkedin'
+  }
+]
+
 
 
 const main = document.querySelector('main');
@@ -67,12 +87,24 @@ const foto = document.createElement('div');
 foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
 foto.className = 'foto';
 header.append(foto);
+
+//? footer
+
 const footer = document.createElement('footer');
 footer.id = 'footer';
 footer.className = 'flex-container';
 document.body.append(footer);
+const divRrss = document.createElement('div');
+divRrss.classList.add('flex-container', 'div-rrss');
+footer.append(divRrss);
+createList(divRrss, rrss, 'rrss');
 
-
+const sectionInfo = document.createElement('section');
+sectionInfo.classList.add('flex-container', 'section-info');
+main.append(sectionInfo);
+const containerInfo = document.createElement('div');
+containerInfo.classList.add('flex-container', 'container-info');
+sectionInfo.append(containerInfo);
 const proyectTitle = document.createElement('h2');
 proyectTitle.innerText = 'Proyectos';
 main.append(proyectTitle);
@@ -87,6 +119,7 @@ sectionArticles.classList.add('flex-container', 'section-articles');
 createButton(proyectContainer, `<i class="bi bi-arrow-left-circle-fill"></i>`, 'left', 'circle');
 proyectContainer.append(sectionArticles);
 createButton(proyectContainer, `<i class="bi bi-arrow-right-circle-fill"></i>`, 'right', 'circle');
+
 
 const createSection = (list) => {
   
@@ -183,4 +216,4 @@ right.addEventListener('click', () => contSlider(`${widthMov} `));
 const footerMaking = document.createElement('div');
 footerMaking.classList.add('flex-container', 'making');
 footer.append(footerMaking);
-footerMaking.innerHTML = `<span class="flex-container"><strong>Hecho por José Manuel Sánchez</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
+footerMaking.innerHTML = `<span class="flex-container"><strong>Hecho por Jmanul</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;

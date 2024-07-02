@@ -17,6 +17,7 @@ export const createList = (site , list , name) => {
 
                const a = document.createElement('a');
                a.href = item.url;
+               a.target = '_blank';
                ulList.append(a);
                if (item.icon) {
                     const li = document.createElement('li');
