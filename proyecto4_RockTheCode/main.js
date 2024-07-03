@@ -102,9 +102,33 @@ createList(divRrss, rrss, 'rrss');
 const sectionInfo = document.createElement('section');
 sectionInfo.classList.add('flex-container', 'section-info');
 main.append(sectionInfo);
-const containerInfo = document.createElement('div');
-containerInfo.classList.add('flex-container', 'container-info');
-sectionInfo.append(containerInfo);
+const topInfo = document.createElement('div');
+topInfo.classList.add('flex-container', 'top-info');
+sectionInfo.append(topInfo);
+const containerBackground = document.createElement('div');
+containerBackground.classList.add('flex-container', 'container-background');
+sectionInfo.append(containerBackground);
+const infoLight = document.createElement('div');
+infoLight.classList.add('proyect-background', 'info-light');
+sectionInfo.append(infoLight);
+
+const infoUp = document.createElement('div');
+infoUp.classList.add('flex-container', 'info-Up');
+sectionInfo.append(infoUp);
+
+const logoInfo = document.createElement('img');
+logoInfo.className = 'logo-info'
+logoInfo.src = '/public/terminal.svg'
+topInfo.append(logoInfo)
+
+const iconsInfo = document.createElement('div');
+iconsInfo.classList.add('flex-container', 'icons-info');
+iconsInfo.innerHTML = `<img src="/public/small.svg" id="small"><img src="/public/open.svg" id="open"><img src="/public/close.svg" id="close">`;
+topInfo.append(iconsInfo);
+
+ 
+
+
 const proyectTitle = document.createElement('h2');
 proyectTitle.innerText = 'Proyectos';
 main.append(proyectTitle);
