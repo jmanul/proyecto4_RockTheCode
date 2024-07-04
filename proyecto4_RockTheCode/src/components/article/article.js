@@ -77,7 +77,7 @@ export const createArticle = (site, item) => {
      const divTechnologies = document.createElement('div');
      divTechnologies.classList.add('flex-container', 'div-technologies');
      divTop.append(divTechnologies);
-     createList(divTechnologies, item.technologies, item.title);
+     createList(divTechnologies, item.technologies,item.title);
      
      divImg.addEventListener('click', () => resetArticle(item));
 

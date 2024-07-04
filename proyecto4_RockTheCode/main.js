@@ -1,6 +1,7 @@
 import { createArticle } from './src/components/article/article';
 import { createButton } from './src/components/button/button';
 import { createList } from './src/components/list/list';
+import { createTerminal } from './src/components/terminal/terminal';
 import './style.css'
 
 let proyects = [
@@ -72,6 +73,45 @@ let rrss = [
   }
 ]
 
+let formacion = [
+
+  {
+    url: 'https://discord.com/channels/jmanul77#6352',
+    icon: '/discord.svg',
+    name: 'discord'
+  },
+  {
+    url: 'https://www.github.com/jmanul',
+    icon: '/git-hub.svg',
+    name: 'git-hub'
+  },
+  {
+    url: 'https://www.linkedin.com/in/jmanul',
+    icon: '/linkedin.svg',
+    name: 'linkedin'
+  }
+]
+
+let esperiencia = [
+
+  {
+    url: 'https://discord.com/channels/jmanul77#6352',
+    text: 'esperiencia',
+    name: 'discord'
+  },
+  {
+    url: 'https://www.github.com/jmanul',
+    icon: '/git-hub.svg',
+    name: 'git-hub'
+  },
+  {
+    url: 'https://www.linkedin.com/in/jmanul',
+    icon: '/linkedin.svg',
+    name: 'linkedin'
+  }
+]
+
+
 
 
 const main = document.querySelector('main');
@@ -99,36 +139,7 @@ divRrss.classList.add('flex-container', 'div-rrss');
 footer.append(divRrss);
 createList(divRrss, rrss, 'rrss');
 
-const sectionInfo = document.createElement('section');
-sectionInfo.classList.add('flex-container', 'section-info');
-main.append(sectionInfo);
-const topInfo = document.createElement('div');
-topInfo.classList.add('flex-container', 'top-info');
-sectionInfo.append(topInfo);
-const containerBackground = document.createElement('div');
-containerBackground.classList.add('flex-container', 'container-background');
-sectionInfo.append(containerBackground);
-const infoLight = document.createElement('div');
-infoLight.classList.add('proyect-background', 'info-light');
-sectionInfo.append(infoLight);
-
-const infoUp = document.createElement('div');
-infoUp.classList.add('flex-container', 'info-Up');
-sectionInfo.append(infoUp);
-
-const logoInfo = document.createElement('img');
-logoInfo.className = 'logo-info'
-logoInfo.src = '/public/terminal.svg'
-topInfo.append(logoInfo)
-
-const iconsInfo = document.createElement('div');
-iconsInfo.classList.add('flex-container', 'icons-info');
-iconsInfo.innerHTML = `<img src="/public/small.svg" id="small"><img src="/public/open.svg" id="open"><img src="/public/close.svg" id="close">`;
-topInfo.append(iconsInfo);
-
- 
-
-
+createTerminal(main, 'info');
 const proyectTitle = document.createElement('h2');
 proyectTitle.innerText = 'Proyectos';
 main.append(proyectTitle);
@@ -233,6 +244,8 @@ const runSlider = (TotalMov) => {
 
 left.addEventListener('click', () => contSlider(`-${widthMov} `));
 right.addEventListener('click', () => contSlider(`${widthMov} `));
+
+
 
 //? mensaje de fin de pagina (footer)
 

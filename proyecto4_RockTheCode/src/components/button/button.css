@@ -42,6 +42,41 @@ button {
      
 }
 
+.button-square {
+
+     background: var(--terminal--screen);
+          height: 100%;
+          width: max-content;
+          box-shadow: inset 0px 0px 10px 0px var(--blue--light);
+          border-radius: 10px;
+          border: 1px solid var(--terminal--screen);
+}
+
+.button-square button {
+     cursor: pointer;
+     background:var(--gradiant--linear2);
+     border:solid 1px var(--blue--light);
+     height:75% ;
+     width: 90%;
+     margin-right: 2px;
+     margin-bottom: 2px;
+     padding: 0 15px;
+     font-family: var(--text);
+     font-size: .8em;
+     font-weight:bold;
+     color:var(--css);
+     box-shadow: 1px 1px 3px 0px var(--white);
+     border-radius: 10px;
+     transition: .5s;
+    
+     &:hover{
+
+          box-shadow: 0px 0px 10px 0px var(--white);
+     }
+     
+     
+}
+
 .off-button {
 
      opacity: 30%;

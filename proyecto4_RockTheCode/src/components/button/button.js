@@ -4,7 +4,7 @@ export const createButton = (site, content, id, name) => {
      
 
      const divButton = document.createElement('div');
-     divButton.classList.add(name);
+     divButton.classList.add(name,'flex-container');
      divButton.id = id;
      site.append(divButton);
      const buttonButton = document.createElement('button');
