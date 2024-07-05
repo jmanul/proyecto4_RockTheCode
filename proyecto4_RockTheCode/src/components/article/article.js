@@ -35,7 +35,6 @@ const resetArticle = (item) => {
                }
 
           }
-
           onText(item);
      }
   

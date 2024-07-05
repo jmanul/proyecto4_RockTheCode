@@ -14,7 +14,9 @@
 }
 
 .info-up {
-
+     padding: 20px;
+     overflow-y:auto;
+     scroll-snap-align: end;
      position: absolute;
      bottom: 0;
      width: 100%;
@@ -25,9 +27,101 @@
      border-right: 3px solid var(--terminal--light);
      border-bottom: 3px solid var(--terminal--light);
      box-shadow: inset 5px 0px 10px 8px var(--terminal--grey);
+     text-align: left;
 
+     &::-webkit-scrollbar {
+               width: 3px;
+          }
+
+          &::-webkit-scrollbar-button {
+               width: 3px;
+               height: 8px;
+          }
+     
+          &::-webkit-scrollbar-track {
+               background:transparent;
+               
+          }
+     
+          &::-webkit-scrollbar-thumb {
+               background: var(--blue--light);
+               border-radius: 10px;
+                 
+          }
+     
+          &::-webkit-scrollbar-thumb:hover {
+               background: var(--gradiant--radial2);
+          }
 
 }
+
+.info-up div {
+
+     width: max-content;
+
+}
+
+.info-up h3 {
+  
+     color: var(--blue);
+     font-size: 30px;
+     font-weight: bold;
+     font-family: var(--title);
+     margin-bottom:20px;
+
+}
+
+.text-terminal {
+
+     width: 100%;
+}
+
+.text-terminal img {
+ 
+     height: 25px;
+
+}
+
+.text-terminal div {
+      
+     margin-bottom: 15px;
+     color: var(--css);
+          font-size: 22px;
+         
+}
+
+.text-terminal h4 {
+     
+     font-family: var(--text);
+     color:var(--html);
+     
+}
+
+.text-terminal p{
+
+     color:var(--light-grey);
+     margin-bottom: 15px;
+     font-family: var(--title);
+} 
+
+@keyframes cursor {
+
+     0% {
+          opacity: 1;
+     }
+     100% {
+
+          opacity: 0;
+     }
+}
+
+.cursor {
+     
+   animation:cursor .7s linear infinite;
+   height: 20px;
+}
+
+
 
 .container-background {
      /* background-image: url(/public/sunrise.png);
@@ -35,8 +129,9 @@
      background-position: center center;
      background-size: cover;
      filter: hue-rotate(06deg);*/
-     border-left: 5px solid var(--terminal--grey);
-     border-bottom: 5px solid var(--terminal--grey);
+     border-right: var(--blue--light) 4px solid;
+     border-left: var(--blue--light) 4px solid;
+     border-bottom: var(--blue--light) 4px solid;
      box-shadow: 3px 2px 20px 0px var(--blue--light);
      width: 100%;
      height: 100%;
@@ -75,7 +170,7 @@
 .logo-info {
 
      height: 70%;
-     filter: blur(1px) opacity(.1);
+     filter: blur(.5px) opacity(.1);
 }
 
 .icons-info {

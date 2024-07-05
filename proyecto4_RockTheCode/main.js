@@ -4,7 +4,7 @@ import { createList } from './src/components/list/list';
 import { createTerminal } from './src/components/terminal/terminal';
 import './style.css'
 
-let proyects = [
+const proyects = [
   { id :'pinterest',
     title: 'Pinterest',
     description:'Replica y rebranding de Pinterest, creado en Vite usando estilos modulares y componentes, utilizando Javascript y la Api de Unsplash para dotar de funcionalidad el buscador de imagenes.',
@@ -54,7 +54,7 @@ let proyects = [
   }
 ]
 
-let rrss = [
+const rrss = [
 
   {
     url: 'https://discord.com/channels/jmanul77#6352',
@@ -73,45 +73,72 @@ let rrss = [
   }
 ]
 
-let formacion = [
+const texts = [
 
   {
-    url: 'https://discord.com/channels/jmanul77#6352',
-    icon: '/discord.svg',
-    name: 'discord'
+    id:'esperiencia',
+    title: 'Esperiencia',
+    text: [`<div class="flex-container">
+    <img src="/public/company.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/company.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/company.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/company.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>
+`]
   },
+  
   {
-    url: 'https://www.github.com/jmanul',
-    icon: '/git-hub.svg',
-    name: 'git-hub'
-  },
-  {
-    url: 'https://www.linkedin.com/in/jmanul',
-    icon: '/linkedin.svg',
-    name: 'linkedin'
+    id: 'formacion',
+    title: 'Formación',
+    text: [ `<div class="flex-container">
+    <img src="/public/school.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/school.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/school.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>`, `<div class="flex-container">
+    <img src="/public/school.svg">
+    <h4>empresa</h4>
+    <img src="/public/calendar.svg">
+    <spam>fechas</spam>
+  </div>
+  <p>descripcion</p>
+`]
   }
+ 
+  
 ]
-
-let esperiencia = [
-
-  {
-    url: 'https://discord.com/channels/jmanul77#6352',
-    text: 'esperiencia',
-    name: 'discord'
-  },
-  {
-    url: 'https://www.github.com/jmanul',
-    icon: '/git-hub.svg',
-    name: 'git-hub'
-  },
-  {
-    url: 'https://www.linkedin.com/in/jmanul',
-    icon: '/linkedin.svg',
-    name: 'linkedin'
-  }
-]
-
-
 
 
 const main = document.querySelector('main');
@@ -128,6 +155,8 @@ foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6ut
 foto.className = 'foto';
 header.append(foto);
 
+createTerminal(main, 'info',texts);
+
 //? footer
 
 const footer = document.createElement('footer');
@@ -139,7 +168,7 @@ divRrss.classList.add('flex-container', 'div-rrss');
 footer.append(divRrss);
 createList(divRrss, rrss, 'rrss');
 
-createTerminal(main, 'info');
+
 const proyectTitle = document.createElement('h2');
 proyectTitle.innerText = 'Proyectos';
 main.append(proyectTitle);

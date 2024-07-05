@@ -1,33 +1,34 @@
 button {
-     
+
      border: none;
      background-color: transparent;
      box-shadow: none;
 }
 
 .circle {
-     
-     position: relative; 
-     border-radius:50%;
-     border:  1px solid var(--vite);
-   
+
+     position: relative;
+     border-radius: 50%;
+     border: 1px solid var(--vite);
+
      opacity: 70%;
-     height:48px;
+     height: 48px;
      width: 46px;
-     box-shadow:0px 0px 30px 2px var(--black);
+     box-shadow: 0px 0px 30px 2px var(--black);
      transition: .4s;
 
-     &:hover  {
+     &:hover {
 
           background-color: var(--blue);
-          box-shadow:0px 0px 30px 2px var(--vite);
+          box-shadow: 0px 0px 30px 2px var(--vite);
      }
-     
+
 }
+
 .circle button {
-     
+
      border-radius: 50%;
-     height:fit-content;
+     height: fit-content;
 
 }
 
@@ -38,58 +39,61 @@ button {
      position: absolute;
      top: 2px;
      left: 2px;
-     cursor: pointer;    
-     
+     cursor: pointer;
+
 }
 
 .button-square {
 
      background: var(--terminal--screen);
-          height: 100%;
-          width: max-content;
-          box-shadow: inset 0px 0px 10px 0px var(--blue--light);
-          border-radius: 10px;
-          border: 1px solid var(--terminal--screen);
+     height: 100%;
+     width: max-content;
+     box-shadow: inset 0px 0px 10px 0px var(--blue--light);
+     border-radius: 10px;
+     border: 1px solid var(--terminal--screen);
 }
 
 .button-square button {
      cursor: pointer;
-     background:var(--gradiant--linear2);
-     border:solid 1px var(--blue--light);
-     height:75% ;
+     background: var(--gradiant--linear2);
+     border: solid 1px var(--blue--light);
+     height: 75%;
      width: 90%;
      margin-right: 2px;
-     margin-bottom: 2px;
+     margin-bottom: 4px;
      padding: 0 15px;
      font-family: var(--text);
      font-size: .8em;
-     font-weight:bold;
-     color:var(--css);
+     font-weight: bold;
+     color: var(--css);
      box-shadow: 1px 1px 3px 0px var(--white);
      border-radius: 10px;
      transition: .5s;
-    
-     &:hover{
+
+     &:hover {
 
           box-shadow: 0px 0px 10px 0px var(--white);
+          margin-bottom: 1px;
      }
-     
-     
+
+
 }
 
 .off-button {
 
      opacity: 30%;
+
      &:hover {
 
           background-color: transparent;
-          box-shadow:0px 0px 30px 2px var(--black);  
+          box-shadow: 0px 0px 30px 2px var(--black);
           pointer-events: none;
           cursor: default;
      }
 
-     &:hover .circle, button {
-          
+     &:hover .circle,
+     button {
+
           pointer-events: none;
           cursor: default;
      }
@@ -97,23 +101,25 @@ button {
 }
 
 
-   @media (max-width: 650px){
-  
+@media (max-width: 650px) {
+
      .circle {
-     
+
           position: absolute;
-          bottom: 2rem; 
-          
-          
+          bottom: 2rem;
+
+
      }
+
      #left {
 
           left: 2rem;
      }
+
      #right {
 
           right: 2rem;
      }
 
-     
-   }
+
+}

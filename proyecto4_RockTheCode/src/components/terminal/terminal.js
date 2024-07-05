@@ -1,22 +1,57 @@
 import { createButton } from '../button/button';
-import { createList } from '../list/list';
 import './terminal.css'
 
 
 
-const buttonprint = (id) => {
-     
-     for (const iterator of id) {
-         
-          console.log(iterator);
-     
-    }
+const buttonprint = (id, list) => {
+
      const screen = document.querySelector('.info-up');
-     createList(screen, id, id);
+     screen.innerHTML = '';
+     const cursor = document.createElement('img');
+     cursor.className = 'cursor';
+     cursor.src = '/public/mark.svg';
+     screen.append(cursor);
+
+     for (const content of list) {
+
+
+          if (id === content.id) {
+
+               setTimeout(() => {
+
+                    const h3 = document.createElement('h3');
+                    h3.innerText = content.title
+                    screen.append(h3);
+                    for (const item of content.text) {
+
+                         screen.removeChild(cursor);
+                         screen.append(cursor);
+
+                         setTimeout(() => {
+
+                              const article = document.createElement('article');
+                              article.className = 'text-terminal';
+                              article.innerHTML = item;
+                              screen.append(article);
+
+                              screen.removeChild(cursor);
+                              screen.append(cursor);
+                         },1000)
+
+                    }
+ 
+
+               }, 1000);
+             
+               return;
+          }
+
+     }
+
 }
 
 
-export const createTerminal = (site, id) => {
+export const createTerminal = (site, id, list) => {
 
      const sectionInfo = document.createElement('section');
      sectionInfo.classList.add('flex-container', 'section-info');
@@ -30,8 +65,13 @@ export const createTerminal = (site, id) => {
      sectionInfo.append(containerBackground);
 
      const infoUp = document.createElement('div');
-     infoUp.classList.add('flex-container', 'info-up');
+     infoUp.classList.add('info-up');
      sectionInfo.append(infoUp);
+     const cursor = document.createElement('img');
+     cursor.className = 'cursor';
+     cursor.src = '/public/mark.svg';
+     infoUp.append(cursor);
+
 
      const logoInfo = document.createElement('img');
      logoInfo.className = 'logo-info'
@@ -50,17 +90,24 @@ export const createTerminal = (site, id) => {
      iconsInfo.innerHTML = `<img src="/public/small.svg" id="small"><img src="/public/open.svg" id="open"><img src="/public/close.svg" id="close">`;
      topInfo.append(iconsInfo);
 
-     const buttonsAction = () => {
+     const close = document.querySelector('#close');
+     close.onclick = () => {
+
+          infoUp.innerHTML = '';
+          infoUp.append(cursor);
+     }
+
+     const buttonsAction = (list) => {
 
           const buttons = document.querySelectorAll('.button-square');
-     
+
           for (const button of buttons) {
-             
-               button.addEventListener('click', () => buttonprint(button.id));
-               
+
+               button.addEventListener('click', () => buttonprint(button.id, list));
+
           }
      }
 
-     buttonsAction();
+     buttonsAction(list);
 
 }
