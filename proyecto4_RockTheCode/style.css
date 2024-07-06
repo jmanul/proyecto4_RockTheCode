@@ -4,7 +4,7 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-
+  scroll-behavior: smooth;
 
 }
 
@@ -157,6 +157,26 @@ margin: 20px 0;
   height: 100%;
 }
 
+header ul{
+
+ padding: 20px;
+}
+
+header ul li {
+ 
+  padding: 2px;
+  height: fit-content;
+  width: fit-content;
+}
+
+header ul li img{
+  background:var(--blue--light);
+  padding: 2px;
+    height: 2em;
+      width: 2em;
+      border-radius: 50%;
+}
+
 main {
   
   flex-direction: column;
@@ -233,10 +253,10 @@ footer {
 }
 
 .div-rrss div{
-
+  
   margin: 30px 10px;
   width: 50px;
-   height: 30px;
+   height: auto;
 }
 
 .div-rrss div img {
@@ -247,10 +267,16 @@ footer {
 
 }
 
+
 .making {
   opacity: 1;
   width: 100%;
   height: 50px;
+}
+
+.making a{
+
+  color:var(--white);
 }
 
 .pasttri-logo {

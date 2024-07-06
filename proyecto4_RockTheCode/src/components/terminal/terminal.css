@@ -1,4 +1,3 @@
-
 .section-info {
      position: relative;
      top: 0;
@@ -9,14 +8,22 @@
      width: 80%;
      height: 400px;
      border-radius: 10px;
-     background:var(--terminal--screen);
-     
+     background: var(--terminal--screen);
+
 }
 
-.info-up {
+.section-info-open {
+
+     max-width: 90%;
+     height: 100vh;
+
+}
+
+.info-up-container {
      padding: 20px;
-     overflow-y:auto;
-     scroll-snap-align: end;
+     text-align: left;
+     overflow-y: auto;
+     scroll-behavior: smooth;
      position: absolute;
      bottom: 0;
      width: 100%;
@@ -27,33 +34,34 @@
      border-right: 3px solid var(--terminal--light);
      border-bottom: 3px solid var(--terminal--light);
      box-shadow: inset 5px 0px 10px 8px var(--terminal--grey);
-     text-align: left;
+
 
      &::-webkit-scrollbar {
-               width: 3px;
-          }
+          width: 3px;
+     }
 
-          &::-webkit-scrollbar-button {
-               width: 3px;
-               height: 8px;
-          }
-     
-          &::-webkit-scrollbar-track {
-               background:transparent;
-               
-          }
-     
-          &::-webkit-scrollbar-thumb {
-               background: var(--blue--light);
-               border-radius: 10px;
-                 
-          }
-     
-          &::-webkit-scrollbar-thumb:hover {
-               background: var(--gradiant--radial2);
-          }
+     &::-webkit-scrollbar-button {
+          width: 3px;
+          height: 8px;
+     }
+
+     &::-webkit-scrollbar-track {
+          background: transparent;
+
+     }
+
+     &::-webkit-scrollbar-thumb {
+          background: var(--blue--light);
+          border-radius: 10px;
+
+     }
+
+     &::-webkit-scrollbar-thumb:hover {
+          background: var(--gradiant--radial2);
+     }
 
 }
+
 
 .info-up div {
 
@@ -62,12 +70,12 @@
 }
 
 .info-up h3 {
-  
+     margin-top: 10px;
      color: var(--blue);
      font-size: 30px;
      font-weight: bold;
      font-family: var(--title);
-     margin-bottom:20px;
+     margin-bottom: 20px;
 
 }
 
@@ -77,38 +85,39 @@
 }
 
 .text-terminal img {
- 
+
      height: 25px;
 
 }
 
 .text-terminal div {
-      
+
      margin-bottom: 15px;
      color: var(--css);
-          font-size: 22px;
-         
+     font-size: 22px;
+
 }
 
 .text-terminal h4 {
-     
+
      font-family: var(--text);
-     color:var(--html);
-     
+     color: var(--html);
+
 }
 
-.text-terminal p{
+.text-terminal p {
 
-     color:var(--light-grey);
+     color: var(--light-grey);
      margin-bottom: 15px;
      font-family: var(--title);
-} 
+}
 
 @keyframes cursor {
 
      0% {
           opacity: 1;
      }
+
      100% {
 
           opacity: 0;
@@ -116,19 +125,15 @@
 }
 
 .cursor {
-     
-   animation:cursor .7s linear infinite;
-   height: 20px;
+
+     animation: cursor .7s linear infinite;
+     height: 20px;
 }
 
 
 
 .container-background {
-     /* background-image: url(/public/sunrise.png);
-     background: var(--blue--light);
-     background-position: center center;
-     background-size: cover;
-     filter: hue-rotate(06deg);*/
+
      border-right: var(--blue--light) 4px solid;
      border-left: var(--blue--light) 4px solid;
      border-bottom: var(--blue--light) 4px solid;
@@ -162,9 +167,9 @@
      position: absolute;
      left: 9%;
      height: 70%;
-     border-radius:10px;
-     
-     
+     border-radius: 10px;
+
+
 }
 
 .logo-info {
@@ -222,8 +227,37 @@
 
      .buttons {
 
-          left:0;
+          left: 0;
           top: -40px;
-        
+
+     }
+
+          .section-info-open {
+     
+               width: 90%;
+               height: 80vh;
+     
           }
+
+     .section-info-open .buttons {
+
+          left: 0;
+          top: -60px;
+     }
+}
+
+@media (max-width: 1000px) {
+
+          .section-info-open {
+     
+               width: 90%;
+               height: 80vh;
+     
+          }
+
+     .section-info-open .buttons {
+
+          left: 0;
+          top: -60px;
+     }
 }

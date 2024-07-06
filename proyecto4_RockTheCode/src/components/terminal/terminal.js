@@ -1,19 +1,31 @@
 import { createButton } from '../button/button';
 import './terminal.css'
 
+// const moveScreen = () => {
+//      const screen = document.querySelector('.info-up');
+     
+//      setTimeout(() => {
+//           let heightText = screen.getBoundingClientRect();
+//           console.log(heightText)
+//           screen.style.transform = `translateY(-${heightText.height})px)`;
+//      }, 2000)
+// }
 
 
 const buttonprint = (id, list) => {
 
-     const screen = document.querySelector('.info-up');
-     screen.innerHTML = '';
+     
+     const backgroundScreen = document.querySelector('.info-up-container');
+     backgroundScreen.innerHTML = '';
+     const screen = document.createElement('div');
+     screen.className = 'info-up';
+     backgroundScreen.append(screen);
      const cursor = document.createElement('img');
      cursor.className = 'cursor';
      cursor.src = '/public/mark.svg';
      screen.append(cursor);
 
      for (const content of list) {
-
 
           if (id === content.id) {
 
@@ -36,18 +48,17 @@ const buttonprint = (id, list) => {
 
                               screen.removeChild(cursor);
                               screen.append(cursor);
+                            
                          },1000)
 
                     }
- 
-
-               }, 1000);
-             
-               return;
+                   
+               }, 1000); 
+               
           }
 
-     }
-
+     } 
+     // moveScreen();
 }
 
 
@@ -65,10 +76,11 @@ export const createTerminal = (site, id, list) => {
      sectionInfo.append(containerBackground);
 
      const infoUp = document.createElement('div');
-     infoUp.classList.add('info-up');
+     infoUp.classList.add('info-up-container');
      sectionInfo.append(infoUp);
      const cursor = document.createElement('img');
      cursor.className = 'cursor';
+     cursor.id = 'cursor';
      cursor.src = '/public/mark.svg';
      infoUp.append(cursor);
 
@@ -97,10 +109,24 @@ export const createTerminal = (site, id, list) => {
           infoUp.append(cursor);
      }
 
+     const open = document.querySelector('#open');
+     open.onclick = () => {
+        
+          sectionInfo.classList.add('section-info-open');
+        
+     }
+     
+     const small = document.querySelector('#small');
+     small.onclick = () => {
+        
+          sectionInfo.classList.remove('section-info-open');
+        
+     }
+
      const buttonsAction = (list) => {
-
+          
           const buttons = document.querySelectorAll('.button-square');
-
+         
           for (const button of buttons) {
 
                button.addEventListener('click', () => buttonprint(button.id, list));

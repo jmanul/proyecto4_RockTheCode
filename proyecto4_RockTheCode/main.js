@@ -70,7 +70,53 @@ const rrss = [
     url: 'https://www.linkedin.com/in/jmanul',
     icon: '/linkedin.svg',
     name: 'linkedin'
+  },
+  {
+    url: 'https://www.behance.net/josemasnchez1',
+    icon: '/behance.svg',
+    name: 'behance'
   }
+  
+]
+
+const technology = [
+
+  {
+   
+    icon: '/git.svg',
+    name: 'git'
+  },
+  {
+  
+    icon: '/html-5.svg',
+    name: 'html-5'
+  },
+  {
+    
+    icon: '/css-3.svg',
+    name: 'css-3'
+  },
+  {
+   
+    icon: '/javascript.svg',
+    name: 'javascript'
+  },
+  {
+   
+    icon: '/figma.svg',
+    name: 'figma'
+  },
+  {
+   
+    icon: '/photoshop.svg',
+    name: 'photoshop'
+  },
+  {
+   
+    icon: '/illustrator.svg',
+    name: 'illustrator'
+  }
+  
 ]
 
 const texts = [
@@ -154,7 +200,7 @@ const foto = document.createElement('div');
 foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
 foto.className = 'foto';
 header.append(foto);
-
+createList(header,technology,'technology')
 createTerminal(main, 'info',texts);
 
 //? footer
@@ -282,4 +328,4 @@ right.addEventListener('click', () => contSlider(`${widthMov} `));
 const footerMaking = document.createElement('div');
 footerMaking.classList.add('flex-container', 'making');
 footer.append(footerMaking);
-footerMaking.innerHTML = `<span class="flex-container"><strong>Hecho por Jmanul</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
+footerMaking.innerHTML = `<span class="flex-container"><img class ='contact' src="/public/mail.svg" alt="contact"><a href="mailto:jmanul77@gmail.com">jmanul77@gmail.com</a><strong>Hecho por Jmanul</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
