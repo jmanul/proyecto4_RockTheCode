@@ -209,9 +209,16 @@ const header = document.createElement('header');
 header.id = 'header';
 header.className = 'flex-container';
 document.body.insertBefore(header, main);
+const titleContainer = document.createElement('div');
+titleContainer.className = 'title-container';
+header.append(titleContainer);
+// const titleNameSub = document.createElement('h1');
+// titleNameSub.innerText = 'Jose Manuel Sanchez';
+// titleContainer.append(titleNameSub)
 const titleName = document.createElement('h1');
 titleName.innerText = 'Jose Manuel Sanchez';
-header.append(titleName)
+titleName.className = 'title-name';
+titleContainer.append(titleName)
 const foto = document.createElement('div');
 foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
 foto.className = 'foto';
