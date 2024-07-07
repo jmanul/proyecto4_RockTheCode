@@ -21,18 +21,18 @@ export const createTerminal = (site, id) => {
      const cursor = document.createElement('img');
      cursor.className = 'cursor';
      cursor.id = 'cursor';
-     cursor.src = '/public/mark.svg';
+     cursor.src = '/mark.svg';
      infoUp.append(cursor);
 
 
      const logoInfo = document.createElement('img');
      logoInfo.className = 'logo-info'
-     logoInfo.src = '/public/terminal.svg'
+     logoInfo.src = '/terminal.svg'
      topInfo.append(logoInfo)
 
      const iconsInfo = document.createElement('div');
      iconsInfo.classList.add('flex-container', 'icons-info');
-     iconsInfo.innerHTML = `<img src="/public/small.svg" id="small"><img src="/public/open.svg" id="open"><img src="/public/close.svg" id="close">`;
+     iconsInfo.innerHTML = `<img src="/small.svg" id="small"><img src="/open.svg" id="open"><img src="/close.svg" id="close">`;
      topInfo.append(iconsInfo);
 
      const close = document.querySelector('#close');

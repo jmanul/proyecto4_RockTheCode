@@ -8,6 +8,7 @@
      height: 400px;
      border-radius: 10px;
      background: var(--terminal--screen);
+     transition: .3;
 
 }
 
@@ -119,7 +120,7 @@
 .text-terminal spam {
 
      color: var(--light-grey);
-     font-family: var(--text);
+     font-family: var(--title);
      font-size: 20px;
 }
 

@@ -125,32 +125,32 @@ const texts = [
     id:'esperiencia',
     title: 'Esperiencia',
     text: [`<div class="flex-container">
-    <img src="/public/company.svg">
+    <img src="/company.svg">
     <h4>Paredes Distribuciones</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2012 - 2015</spam>
     </div>
   <p>Tecnico comercial de peluqueria y estetica profesional</p>`,
       `<div class="flex-container">
-    <img src="/public/company.svg">
+    <img src="/company.svg">
     <h4>Salesland</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2017</spam></div>
   <p>Promotor de producto de fidelización</p>`,
       `<div class="flex-container">
-    <img src="/public/company.svg">
+    <img src="/company.svg">
     <h4>Jake SA</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2018 - 2021</spam></div>
   <p>Gestión de residuos</p>`,
       `<div class="flex-container">
-    <img src="/public/company.svg">
+    <img src="/company.svg">
     <h4>Tablenova</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2022 - 2024</spam></div>
   <p>Operario de maquina de canteadora</p>`]
   },
@@ -160,40 +160,40 @@ const texts = [
     title: 'Formación',
     text: [
       `<div class="flex-container">
-    <img src="/public/school.svg">
+    <img src="/school.svg">
     <h4>I.B. Floridablanca</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>1991 - 1998</spam>
     </div>
   <p> B.U.P.</p>`,
   `<div class="flex-container">
-    <img src="/public/school.svg">
+    <img src="/school.svg">
     <h4>UOC X - Xtended Studies</h4>
     <h5>Ciclo Formativo de Grado Superior</h5>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2019 - 2023</spam></div>
   <p>Desarrollo de aplicaciones multiplataforma (DAM)</p>`,
       `<div class="flex-container">
-    <img src="/public/school.svg">
+    <img src="/school.svg">
     <h4>Oracle</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2020</spam></div>
   <p>Diploma curso Programación de bases de datos con PL/SQL</p>`,
       `<div class="flex-container">
-    <img src="/public/school.svg">
+    <img src="/school.svg">
     <h4>OpenBootcamp</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2022</spam></div>
   <p>Certificación Git</p>`,
   `<div class="flex-container">
-    <img src="/public/school.svg">
+    <img src="/school.svg">
     <h4>Coderhouse</h4>
   </div>
-  <div class="flex-container"><img src="/public/calendar.svg">
+  <div class="flex-container"><img src="/calendar.svg">
     <spam>2023</spam></div>
   <p>Certificado Coderhouse Photoshop e Illustrator</p>`
     ]
@@ -348,7 +348,7 @@ const buttonprint = (id, list) => {
   backgroundScreen.append(screen);
   const cursor = document.createElement('img');
   cursor.className = 'cursor';
-  cursor.src = '/public/mark.svg';
+  cursor.src = '/mark.svg';
   screen.append(cursor);
 
   for (const content of list) {
@@ -411,4 +411,4 @@ buttonsAction(texts, '.button-square');
 const footerMaking = document.createElement('div');
 footerMaking.classList.add('flex-container', 'making');
 footer.append(footerMaking);
-footerMaking.innerHTML = `<span class="flex-container"><img class ='contact' src="/public/mail.svg" alt="contact"><a href="mailto:jmanul77@gmail.com">jmanul77@gmail.com</a><strong>Hecho por Jmanul</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
+footerMaking.innerHTML = `<span class="flex-container"><img class ='contact' src="/mail.svg" alt="contact"><a href="mailto:jmanul77@gmail.com">jmanul77@gmail.com</a><strong>Hecho por Jmanul</strong><div class="pasttri-logo"><img src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="logo pasttri"></div></span>`;
