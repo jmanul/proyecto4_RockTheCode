@@ -20,17 +20,17 @@
   --gradiant--radial2: radial-gradient(circle, rgba(189, 52, 254, 1) 16%, rgba(65, 209, 255, 0.6082808123249299) 66%);
   --gradiant--radial3: radial-gradient(circle, #db44fe49 5%, rgba(65, 209, 255, 0) 95%);
   --gradiant--linear: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  --gradiant--linear2: linear-gradient(0deg,#db44fe49  11%, rgba(231, 229, 229, 0) 90%);
-  --linear--gradiant:linear-gradient(0deg, rgba(65, 209, 255, 0.9836309523809523) -100%, rgba(0, 21, 36, 0.9570203081232493) 20%);
+  --gradiant--linear2: linear-gradient(0deg, #db44fe49 11%, rgba(231, 229, 229, 0) 90%);
+  --linear--gradiant: linear-gradient(0deg, rgba(65, 209, 255, 0.9836309523809523) -100%, rgba(0, 21, 36, 0.9570203081232493) 20%);
   ;
-  --terminal--light:rgb(53, 51, 51);
-  --terminal--grey:rgba(54, 52, 52, 0.372);
-  --terminal--screen:rgba(96, 113, 118, 0.105);
+  --terminal--light: rgb(53, 51, 51);
+  --terminal--grey: rgba(54, 52, 52, 0.372);
+  --terminal--screen: rgba(96, 113, 118, 0.105);
   --dark-grey: rgb(104, 103, 103);
   --light-grey: rgb(248, 248, 248);
   --blue: #41d1ff;
   --blue--light: #41d0ff64;
-  --dark--green:rgba(0, 21, 36, 0.708);
+  --dark--green: rgba(0, 21, 36, 0.708);
   --text: "Encode Sans SC",
     sans-serif;
   --title: "M PLUS 1 Code",
@@ -66,10 +66,40 @@ body {
   min-height: 100dvh;
 
   background: var(--black);
+
+  &::-webkit-scrollbar {
+      width: 5px;
+   
+    }
+
+         &::-webkit-scrollbar:hover {
+           width: 10px;
+    
+         }
+  
+    &::-webkit-scrollbar-button {
+      width: 3px;
+      height: 8px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+  
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--blue--light);
+      border-radius: 10px;
+  
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--gradiant--radial2);
+    }
 }
 
 .section-articles {
-  
+
   padding: 20px 0 20px 5px;
   margin: 50px 0;
   gap: 20px;
@@ -111,77 +141,89 @@ h2 {
 }
 
 header {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    box-shadow:  0px -5px 20px 5px var(--css);
-      background: var(--gradiant--radial3);
-    /*background-image: url(./public/proyect-backgraund.svg);
-    
-      background-position: center center;
-      background-size: 3px;*/
-  
-   /* -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;*/
-      
-   
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px -5px 100px 10px var(--css);
+  background: var(--gradiant--radial3);
+  border-bottom: 10px solid var(--black);
 }
 
 h1 {
-margin: 20px 0;
+  margin: 20px 0;
   font-family: var(--title);
   font-size: 50px;
   font-weight: bold;
   background: var(--css);
 
-  
-  color:transparent;
+
+  color: transparent;
   -webkit-background-clip: text;
-    background-clip: text;
-    filter: drop-shadow(0px -1px 3px var(--vite));
-    
+  background-clip: text;
+  filter: drop-shadow(0px -1px 3px var(--vite));
+
 }
 
 .foto {
   margin: 20px 0;
-  background:var(--gradiant--linear4);
+  background: var(--gradiant--linear4);
   height: 200px;
-  width:200px;
+  width: 200px;
   border-radius: 50%;
-  box-shadow: 10px 0px 10px -5px var(--blue);
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 10px 0px var(--blue);
 }
 
 .foto-perfil {
 
   height: 100%;
+
 }
 
-header ul{
-
- padding: 20px;
-}
-
-header ul li {
- 
-  padding: 2px;
-  height: fit-content;
-  width: fit-content;
-}
-
-header ul li img{
-  background:var(--blue--light);
-  padding: 2px;
-    height: 2em;
-      width: 2em;
-      border-radius: 50%;
-}
 
 main {
-  
+
   flex-direction: column;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+
+}
+
+main > ul {
+ 
+  border-radius: 50px;
+  padding: 10px 5px;
+  max-width: 80%;
+  backdrop-filter: blur(1px);
+  margin: 150px 0 0 0;
+ 
+
+}
+
+main > ul li {
+  background: var(--blue--light);
+  border-radius: 50px;
+  padding: 2px;
+  height: fit-content;
+  width: fit-content;
+  transition: .5s;
+  
+    /* &:hover {
+  
+      box-shadow: 0px 0px 10px 0px var(--white);
+     
+    } */
+}
+
+main > ul li img {
+
+  /* cursor: pointer; */
+  background: var(--white);
+  border-radius: 50px;
+  padding: 2px;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
   
 }
 
@@ -189,17 +231,17 @@ main {
 
   width: 100%;
   height: 100%;
-  background-color:var(--black);
-  background-image:url(./public/proyect-backgraund.svg);
-  
+  background-color: var(--black);
+  background-image: url(./public/proyect-backgraund.svg);
+
   background-repeat: repeat;
   background-position: center center;
-  background-size:40px;
+  background-size: 40px;
   position: absolute;
   left: 0;
   top: 0;
-  
-  filter:blur(150px) opacity(1);
+
+  filter: blur(150px) opacity(1);
   z-index: -1;
 
 
@@ -248,20 +290,21 @@ footer {
   height: auto;
   padding-top: 30px;
   background: var(--gradiant--linear2);
-  box-shadow: 0px 0px 25px -15px var(--css);
-
+  box-shadow: 0px 0px 100px 10px var(--css);
+  border-top: 10px solid var(--vite);
+  /* background: var(--gradiant--radial3); */
 }
 
-.div-rrss div{
-  
+.div-rrss div {
+
   margin: 30px 10px;
   width: 50px;
-   height: auto;
+  height: auto;
 }
 
 .div-rrss div img {
 
-  width:100%;
+  width: 100%;
   border-radius: 50%;
   border: 5px solid var(--linear--gradiant);
 
@@ -274,9 +317,9 @@ footer {
   height: 50px;
 }
 
-.making a{
+.making a {
 
-  color:var(--white);
+  color: var(--white);
 }
 
 .pasttri-logo {
@@ -296,10 +339,10 @@ footer {
 
   font-size: small;
   font-family: var(--text);
-    background: var(--gradiant--linear);
-      -webkit-background-clip: text;
-      color: transparent;
-      background-clip: text;
+  background: var(--gradiant--linear);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
 }
 
 
@@ -327,17 +370,17 @@ footer {
 @media (min-width: 850px) {
 
   .section-info {
-    
-      height: 550px;
-    
-    }
+
+    height: 550px;
+
+  }
 }
 
 
 @media (max-width: 650px) {
 
   .proyect-container {
-    
+
     justify-content: center;
     width: 95%;
     padding: 0 15px;
@@ -362,10 +405,10 @@ footer {
 
   }
 
-    .div-rrss div {
-  
-      width: 30px;
-    
-    }
+  .div-rrss div {
+
+    width: 30px;
+
+  }
 
 }

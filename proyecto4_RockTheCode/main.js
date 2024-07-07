@@ -126,61 +126,77 @@ const texts = [
     title: 'Esperiencia',
     text: [`<div class="flex-container">
     <img src="/public/company.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>Paredes Distribuciones</h4>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2012 - 2015</spam>
+    </div>
+  <p>Tecnico comercial de peluqueria y estetica profesional</p>`,
+      `<div class="flex-container">
     <img src="/public/company.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>Salesland</h4>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2017</spam></div>
+  <p>Promotor de producto de fidelización</p>`,
+      `<div class="flex-container">
     <img src="/public/company.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>Jake SA</h4>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2018 - 2021</spam></div>
+  <p>Gestión de residuos</p>`,
+      `<div class="flex-container">
     <img src="/public/company.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>Tablenova</h4>
   </div>
-  <p>descripcion</p>
-`]
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2022 - 2024</spam></div>
+  <p>Operario de maquina de canteadora</p>`]
   },
   
   {
     id: 'formacion',
     title: 'Formación',
-    text: [ `<div class="flex-container">
+    text: [
+      `<div class="flex-container">
     <img src="/public/school.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>I.B. Floridablanca</h4>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>1991 - 1998</spam>
+    </div>
+  <p> B.U.P.</p>`,
+  `<div class="flex-container">
     <img src="/public/school.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>UOC X - Xtended Studies</h4>
+    <h5>Ciclo Formativo de Grado Superior</h5>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2019 - 2023</spam></div>
+  <p>Desarrollo de aplicaciones multiplataforma (DAM)</p>`,
+      `<div class="flex-container">
     <img src="/public/school.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>Oracle</h4>
   </div>
-  <p>descripcion</p>`, `<div class="flex-container">
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2020</spam></div>
+  <p>Diploma curso Programación de bases de datos con PL/SQL</p>`,
+      `<div class="flex-container">
     <img src="/public/school.svg">
-    <h4>empresa</h4>
-    <img src="/public/calendar.svg">
-    <spam>fechas</spam>
+    <h4>OpenBootcamp</h4>
   </div>
-  <p>descripcion</p>
-`]
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2022</spam></div>
+  <p>Certificación Git</p>`,
+  `<div class="flex-container">
+    <img src="/public/school.svg">
+    <h4>Coderhouse</h4>
+  </div>
+  <div class="flex-container"><img src="/public/calendar.svg">
+    <spam>2023</spam></div>
+  <p>Certificado Coderhouse Photoshop e Illustrator</p>`
+    ]
   }
  
   
@@ -200,8 +216,14 @@ const foto = document.createElement('div');
 foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
 foto.className = 'foto';
 header.append(foto);
-createList(header,technology,'technology')
-createTerminal(main, 'info',texts);
+createList(main, technology, 'technology');
+const buttons = document.createElement('div');
+buttons.classList.add('buttons');
+main.append(buttons);
+
+createButton(buttons, 'Esperiencia', 'esperiencia', 'button-square');
+createButton(buttons, 'Formación', 'formacion', 'button-square');
+createTerminal(main, 'info');
 
 //? footer
 
@@ -315,10 +337,71 @@ const runSlider = (TotalMov) => {
   }
  
 }
+
+const buttonprint = (id, list) => {
+
+
+  const backgroundScreen = document.querySelector('.info-up-container');
+  backgroundScreen.innerHTML = '';
+  const screen = document.createElement('div');
+  screen.className = 'info-up';
+  backgroundScreen.append(screen);
+  const cursor = document.createElement('img');
+  cursor.className = 'cursor';
+  cursor.src = '/public/mark.svg';
+  screen.append(cursor);
+
+  for (const content of list) {
+
+    if (id === content.id) {
+
+      setTimeout(() => {
+
+        const h3 = document.createElement('h3');
+        h3.innerText = content.title
+        screen.append(h3);
+        for (const item of content.text) {
+
+          screen.removeChild(cursor);
+          screen.append(cursor);
+
+          setTimeout(() => {
+
+            const article = document.createElement('article');
+            article.className = 'text-terminal';
+            article.innerHTML = item;
+            screen.append(article);
+
+            screen.removeChild(cursor);
+            screen.append(cursor);
+
+          }, 1000)
+
+        }
+
+      }, 1000);
+
+    }
+
+  }
+  
+}
   
 
 left.addEventListener('click', () => contSlider(`-${widthMov} `));
 right.addEventListener('click', () => contSlider(`${widthMov} `));
+const buttonsAction = (list, name) => {
+
+  const buttons = document.querySelectorAll(name);
+
+  for (const button of buttons) {
+
+    button.addEventListener('click', () => buttonprint(button.id, list));
+
+  }
+}
+
+buttonsAction(texts, '.button-square');
 
 
 

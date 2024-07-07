@@ -43,10 +43,20 @@ button {
 
 }
 
+.buttons {
+     display: flex;
+     gap: 1px;
+     height: 40px;
+     max-width: 80%;
+     border-radius: 10px;
+     margin: 20px 0;
+    
+}
+
 .button-square {
 
      background: var(--terminal--screen);
-     height: 100%;
+     height: 40px;
      width: max-content;
      box-shadow: inset 0px 0px 10px 0px var(--blue--light);
      border-radius: 10px;

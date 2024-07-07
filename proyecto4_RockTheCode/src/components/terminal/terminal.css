@@ -3,7 +3,6 @@
      top: 0;
      z-index: 3;
      max-width: 900px;
-     margin-top: 150px;
      background: var(--terminal--grey);
      width: 80%;
      height: 400px;
@@ -35,7 +34,6 @@
      border-bottom: 3px solid var(--terminal--light);
      box-shadow: inset 5px 0px 10px 8px var(--terminal--grey);
 
-
      &::-webkit-scrollbar {
           width: 3px;
      }
@@ -65,13 +63,14 @@
 
 .info-up div {
 
-     width: max-content;
+     max-width: 90%;
+     justify-content:left;
 
 }
 
 .info-up h3 {
-     margin-top: 10px;
-     color: var(--blue);
+     
+     color: var(--blue--light);
      font-size: 30px;
      font-weight: bold;
      font-family: var(--title);
@@ -79,10 +78,7 @@
 
 }
 
-.text-terminal {
 
-     width: 100%;
-}
 
 .text-terminal img {
 
@@ -90,26 +86,41 @@
 
 }
 
-.text-terminal div {
+.text-terminal > div {
 
-     margin-bottom: 15px;
-     color: var(--css);
-     font-size: 22px;
-
+     margin-bottom: 5px;
 }
+
 
 .text-terminal h4 {
 
-     font-family: var(--text);
+     font-family: var(--title);
      color: var(--html);
+     font-size: 25px;
+
+}
+
+.text-terminal h5 {
+     margin:0 0 5px 35px;
+     font-family: var(--title);
+     color: var(--white);
+     font-size: 20px;
 
 }
 
 .text-terminal p {
 
      color: var(--light-grey);
-     margin-bottom: 15px;
-     font-family: var(--title);
+     margin: 20px 20px 35px 35px;
+     font-family: var(--text);
+     font-size: 20px;
+}
+
+.text-terminal spam {
+
+     color: var(--light-grey);
+     font-family: var(--text);
+     font-size: 20px;
 }
 
 @keyframes cursor {
@@ -158,17 +169,6 @@
      border-top-right-radius: 10px;
      border-top: var(--blue--light) 1px solid;
      padding: 0 10px;
-
-}
-
-.buttons {
-     display: flex;
-     gap: 1px;
-     position: absolute;
-     left: 9%;
-     height: 70%;
-     border-radius: 10px;
-
 
 }
 
@@ -225,25 +225,12 @@
 
 @media (max-width: 700px) {
 
-     .buttons {
-
-          left: 0;
-          top: -40px;
-
-     }
-
           .section-info-open {
      
                width: 90%;
                height: 80vh;
      
           }
-
-     .section-info-open .buttons {
-
-          left: 0;
-          top: -60px;
-     }
 }
 
 @media (max-width: 1000px) {
@@ -254,10 +241,4 @@
                height: 80vh;
      
           }
-
-     .section-info-open .buttons {
-
-          left: 0;
-          top: -60px;
-     }
 }
