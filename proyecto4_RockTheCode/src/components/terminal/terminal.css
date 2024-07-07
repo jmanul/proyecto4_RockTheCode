@@ -8,7 +8,7 @@
      height: 400px;
      border-radius: 10px;
      background: var(--terminal--screen);
-     transition: .3;
+     transition: .3q;
 
 }
 
