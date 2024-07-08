@@ -1,4 +1,5 @@
 
+import { createLogo } from '../logo/logo';
 import './terminal.css'
 
 
@@ -8,6 +9,7 @@ export const createTerminal = (site, id) => {
      sectionInfo.classList.add('flex-container', 'section-info');
      sectionInfo.id = id
      site.append(sectionInfo);
+     createLogo(sectionInfo, './ubuntu.svg', 'logo-ubuntu');
      const topInfo = document.createElement('div');
      topInfo.classList.add('top-info');
      sectionInfo.append(topInfo);

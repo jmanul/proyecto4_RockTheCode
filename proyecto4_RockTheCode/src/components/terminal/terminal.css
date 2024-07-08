@@ -137,7 +137,7 @@
 }
 
 .cursor {
-
+     
      animation: cursor .7s linear infinite;
      height: 20px;
 }

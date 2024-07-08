@@ -1,6 +1,7 @@
 import { createArticle } from './src/components/article/article';
 import { createButton } from './src/components/button/button';
 import { createList } from './src/components/list/list';
+import { createLogo } from './src/components/logo/logo';
 import { createTerminal } from './src/components/terminal/terminal';
 import './style.css'
 
@@ -209,20 +210,11 @@ const header = document.createElement('header');
 header.id = 'header';
 header.className = 'flex-container';
 document.body.insertBefore(header, main);
-const titleContainer = document.createElement('div');
-titleContainer.className = 'title-container';
-header.append(titleContainer);
-// const titleNameSub = document.createElement('h1');
-// titleNameSub.innerText = 'Jose Manuel Sanchez';
-// titleContainer.append(titleNameSub)
 const titleName = document.createElement('h1');
-titleName.innerText = 'Jose Manuel Sanchez';
 titleName.className = 'title-name';
-titleContainer.append(titleName)
-const foto = document.createElement('div');
-foto.innerHTML = '<img class="foto-perfil" src="https://res.cloudinary.com/dn6utw1rl/image/upload/v1710357027/pasttri_gstn60.webp" alt="foto perfil">';
-foto.className = 'foto';
-header.append(foto);
+titleName.innerText = 'Jose Manuel Sanchez';
+main.append(titleName)
+createLogo(header,'./logo-pasttri-svg.svg', 'logo-header')
 createList(main, technology, 'technology');
 const buttons = document.createElement('div');
 buttons.classList.add('buttons');
@@ -367,6 +359,9 @@ const buttonprint = (id, list) => {
         const h3 = document.createElement('h3');
         h3.innerText = content.title
         screen.append(h3);
+
+        
+
         for (const item of content.text) {
 
           screen.removeChild(cursor);

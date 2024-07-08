@@ -104,7 +104,6 @@ body {
   margin: 50px 0;
   gap: 20px;
   max-width: 1100px;
-
   overflow: hidden;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -141,59 +140,31 @@ h2 {
 }
 
 header {
+  position: relative;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 300px;
   box-shadow: 0px -5px 100px 10px var(--css);
   background: var(--gradiant--radial3);
-  border-bottom: 10px solid var(--black);
-}
+  border-bottom: 5px solid var(--blue--light);
+  padding: 0 20px;
+ 
+  flex-direction:row;
+} 
 
 h1 {
-  margin: 20px 0;
+  
   font-family: var(--title);
   font-size: 50px;
   font-weight: bold;
   background: var(--css);
-  position: absolute;
-
-
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  filter: drop-shadow(0px -1px 3px var(--vite));
-
-}
-
-.title-container {
-  
-  background: transparent;
-  width: max-content;
-  box-shadow: 0px -5px 100px 10px var(--vite);
-  width: 200px;
-  background:#41d1ff;
-}
-
-.title-name {
-
-  position: absolute;
- z-index:-1;
-  top: 35px;
-}
-
-.foto {
-  margin: 20px 0;
-  background: var(--gradiant--linear4);
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  margin-bottom: 50px;
-  box-shadow: 0px 0px 10px 0px var(--blue);
-}
-
-.foto-perfil {
-
-  height: 100%;
+  filter: drop-shadow(0px -1px 3px var(--black));
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 5px solid var(--blue--light);
 
 }
 
@@ -201,25 +172,23 @@ h1 {
 main {
 
   flex-direction: column;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 
 }
 
 main > ul {
  
-  border-radius: 50px;
+  border-radius: 50%;
   padding: 10px 5px;
   max-width: 80%;
   backdrop-filter: blur(1px);
-  margin: 150px 0 0 0;
+  margin: 250px 0 0 0;
  
 
 }
 
 main > ul li {
   background: var(--blue--light);
-  border-radius: 50px;
+  border-radius: 50%;
   padding: 2px;
   height: fit-content;
   width: fit-content;
@@ -236,7 +205,6 @@ main > ul li img {
 
   /* cursor: pointer; */
   background: var(--white);
-  border-radius: 50px;
   padding: 2px;
   height: 3em;
   width: 3em;
@@ -427,5 +395,27 @@ footer {
     width: 30px;
 
   }
+
+  header {
+
+    height:180px;
+  }
+
+  h1 {
+
+    font-size:25px;
+  }
+
+  main > ul {
+
+    margin-top:100px;
+  }
+
+    main>ul li img {
+  
+      height: 1.8em;
+      width: 1.8em;
+     
+    }
 
 }
