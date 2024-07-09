@@ -70,34 +70,34 @@ body {
   background: var(--black);
 
   &::-webkit-scrollbar {
-      width: 5px;
-   
-    }
+    width: 5px;
 
-         &::-webkit-scrollbar:hover {
-           width: 10px;
-    
-         }
-  
-    &::-webkit-scrollbar-button {
-      width: 3px;
-      height: 8px;
-    }
-  
-    &::-webkit-scrollbar-track {
-      background: transparent;
-  
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background: var(--blue--light);
-      border-radius: 10px;
-  
-    }
-  
-    &::-webkit-scrollbar-thumb:hover {
-      background: var(--gradiant--radial2);
-    }
+  }
+
+  &::-webkit-scrollbar:hover {
+    width: 10px;
+
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 3px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--blue--light);
+    border-radius: 10px;
+
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--gradiant--radial2);
+  }
 }
 
 .section-articles {
@@ -127,12 +127,12 @@ body {
 
 
 header {
-  position:fixed;
+  position: fixed;
   z-index: 5;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
-  background:var(--black);
+  background: var(--black);
   width: 100%;
   min-height: 120px;
   height: max-content;
@@ -142,33 +142,58 @@ header {
   font-size: 22px;
   font-family: var(--title);
   font-weight: bold;
- 
-} 
 
-header > ul a {
-  
+}
+
+header>ul a {
+
   color: var(--light-grey);
-  border-radius:25px;
+  border-radius: 25px;
   padding: 12px 15px;
+
   &:hover {
 
-      box-shadow: inset 0px 0px 10px 0px var(--light-grey);
+    box-shadow: inset 0px 0px 10px 0px var(--light-grey);
+  }
+}
+
+@keyframes back {
+
+  0% {
+    filter: drop-shadow(0px -1px 3px var(--vite));
+
+  }
+
+  25% {
+
+    filter: drop-shadow(0px -1px 3px var(--css));
+  }
+
+  75% {
+
+    filter: drop-shadow(0px -1px 3px var(--light-grey));
+  }
+
+  100% {
+
+    filter: drop-shadow(0px -1px 3px var(--vite));
   }
 }
 
 h1 {
-  
+
   font-family: var(--title);
   font-size: 100px;
   font-weight: bold;
-  background: var(--css);
-  color: transparent;
+  background: var(--black);
   -webkit-background-clip: text;
+  color: transparent;
   background-clip: text;
   filter: drop-shadow(0px -1px 3px var(--vite));
   width: 90%;
-  margin-top: 270px ;
+  margin-top: 270px;
   scroll-margin-top: 270px;
+  animation: back 4s linear infinite both;
 
 }
 
@@ -179,33 +204,33 @@ main {
 
 }
 
-main > ul {
- 
+main>ul {
+
   border-radius: 50%;
   padding: 10px 5px;
   max-width: 90%;
   backdrop-filter: blur(1px);
   margin-top: 50px;
- 
+
 
 }
 
-main > ul li {
+main>ul li {
   background: var(--blue--light);
   border-radius: 50%;
   padding: 2px;
   height: fit-content;
   width: fit-content;
   transition: .5s;
-  
-    /* &:hover {
+
+  /* &:hover {
   
       box-shadow: 0px 0px 10px 0px var(--white);
      
     } */
 }
 
-main > ul li img {
+main>ul li img {
 
   /* cursor: pointer; */
   background: var(--white);
@@ -213,7 +238,31 @@ main > ul li img {
   height: 3em;
   width: 3em;
   border-radius: 50%;
+
+}
+
+.off-button {
+
+
+  opacity: 30%;
+
+  &:hover {
+
+    background-color: var(--transparent);
+    box-shadow: 0px 0px 30px 2px var(--black);
+    pointer-events: none;
+    cursor: default;
+
+  }
+
+  &:hover ~.circle {
   
+    background-color: var(--transparent);
+    box-shadow: 0px 0px 30px 2px var(--black);
+    pointer-events: none;
+    cursor: default;
+  }
+
 }
 
 .proyect-background {
@@ -402,15 +451,15 @@ footer {
 
   header {
     font-size: 18px;
-    min-height:80px;
-    
+    min-height: 80px;
+
   }
 
 
 
   h1 {
     margin-top: 150px;
-    font-size:65px;
+    font-size: 65px;
     scroll-margin-top: 150px;
 
   }
@@ -422,11 +471,11 @@ footer {
 
 
 
-    main>ul li img {
-  
-      height: 1.8em;
-      width: 1.8em;
-     
-    }
+  main>ul li img {
+
+    height: 1.8em;
+    width: 1.8em;
+
+  }
 
 }

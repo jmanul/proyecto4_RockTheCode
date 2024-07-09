@@ -53,6 +53,29 @@ button {
     
 }
 
+.off-button {
+
+
+     opacity: 30%;
+
+     &:hover {
+
+          background-color: var(--transparent);
+          box-shadow: 0px 0px 30px 2px var(--black);
+          pointer-events: none;
+          cursor: default;
+
+     }
+
+     &:hover~.circle {
+
+          background-color: var(--transparent);
+          box-shadow: 0px 0px 30px 2px var(--black);
+          pointer-events: none;
+          cursor: default;
+     }
+}
+
 .button-square {
 
      background: var(--terminal--screen);
@@ -89,26 +112,6 @@ button {
 
 }
 
-.off-button {
-
-     opacity: 30%;
-
-     &:hover {
-
-          background-color: transparent;
-          box-shadow: 0px 0px 30px 2px var(--black);
-          pointer-events: none;
-          cursor: default;
-     }
-
-     &:hover .circle,
-     button {
-
-          pointer-events: none;
-          cursor: default;
-     }
-
-}
 
 
 @media (max-width: 650px) {
