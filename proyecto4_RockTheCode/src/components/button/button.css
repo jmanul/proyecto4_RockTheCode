@@ -11,7 +11,7 @@ button {
      border-radius: 50%;
      border: 1px solid var(--vite);
 
-     opacity: 70%;
+     opacity: .7;
      height: 48px;
      width: 46px;
      box-shadow: 0px 0px 30px 2px var(--black);
@@ -54,26 +54,28 @@ button {
 }
 
 .off-button {
-
-
-     opacity: 30%;
-
+     
+     opacity: .2;
+     
      &:hover {
+     
+               background-color: var(--transparent);
+               box-shadow: 0px 0px 30px 2px var(--black);
+               pointer-events: none;
+               cursor: none;
+     
+          }
+     
+          &:hover button,
+          i {
+     
+               background-color: var(--transparent);
+               box-shadow: 0px 0px 30px 2px var(--black);
+               pointer-events: none;
+               cursor: none;
+          }
 
-          background-color: var(--transparent);
-          box-shadow: 0px 0px 30px 2px var(--black);
-          pointer-events: none;
-          cursor: default;
-
-     }
-
-     &:hover~.circle {
-
-          background-color: var(--transparent);
-          box-shadow: 0px 0px 30px 2px var(--black);
-          pointer-events: none;
-          cursor: default;
-     }
+    
 }
 
 .button-square {

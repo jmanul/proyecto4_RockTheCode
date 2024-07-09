@@ -13,8 +13,8 @@ let lengthEnd = 0;
 
 
 const initSlider = (list) => {
-     const right = document.querySelector('.right');
-     const left = document.querySelector('.left');
+     const right = document.querySelector('#right');
+     const left = document.querySelector('#left');
      
      const sectionArticles = document.querySelector('.section-articles');
    
@@ -55,8 +55,8 @@ const runSlider = (TotalMov, list) => {
 
 const contSlider = (mov, list) => {
 
-     const right = document.querySelector('.right');
-     const left = document.querySelector('.left');
+     const right = document.querySelector('#right');
+     const left = document.querySelector('#left');
 
      initSlider(list);
 
