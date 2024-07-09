@@ -1,0 +1,13 @@
+
+
+h2 {
+     padding-top: 100px;
+     font-size: 50px;
+     font-family: var(--title);
+     background: var(--gradiant--radial);
+     -webkit-background-clip: text;
+     color: transparent;
+     background-clip: text;
+     scroll-margin-top: 50px;
+
+}

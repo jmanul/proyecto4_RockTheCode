@@ -34,7 +34,7 @@ export const createList = (site , list , name) => {
                     const li = document.createElement('li');
                     li.className = item.name;
                     const p = document.createElement('p');
-                    p.innerText = item.text
+                    p.innerText = item.name;
                     li.append(p);
                     a.append(li);
               }    
@@ -57,7 +57,7 @@ export const createList = (site , list , name) => {
                     const li = document.createElement('li');
                     li.className = item.name;
                     const p = document.createElement('p');
-                    p.innerText = item.text
+                    p.innerText = item.name;
                     li.append(p);
                     
                     ulList.append(li);

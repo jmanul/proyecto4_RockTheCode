@@ -66,12 +66,13 @@
 
      max-width: 90%;
      justify-content:left;
+     scroll-margin-bottom: 10px;
 
 }
 
 .info-up h3 {
      
-     color: var(--blue--light);
+     color: var(--css);
      font-size: 30px;
      font-weight: bold;
      font-family: var(--title);
