@@ -14,6 +14,18 @@ const clearText = (element) => {
      }, 3000);
 }
 
+const onText = (item) => {
+
+     const divText = document.getElementById(item.id);
+     divText.classList.add('opacity-text');
+     const textContainer = document.createElement('div');
+     textContainer.className = 'text-flow';
+     divText.append(textContainer);
+     const text = document.createElement('p');
+     text.innerText = `${item.description}`;
+     textContainer.append(text);
+}
+
 const resetArticle = (item) => {
      
      const articles = [...document.querySelectorAll('.article')];
@@ -40,17 +52,6 @@ const resetArticle = (item) => {
   
 }
 
-const onText = (item) => {
-     
-     const divText = document.getElementById(item.id);
-     divText.classList.add('opacity-text');
-     const textContainer = document.createElement('div');
-     textContainer.className = 'text-flow';
-     divText.append(textContainer);
-     const text = document.createElement('p');
-     text.innerText = `${item.description}`;
-     textContainer.append(text);
-}
 
 export const createArticle = (site, item) => {
      

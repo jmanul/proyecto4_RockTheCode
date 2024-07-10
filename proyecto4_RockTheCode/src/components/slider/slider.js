@@ -15,9 +15,9 @@ let lengthEnd = 0;
 const initSlider = (list) => {
      const right = document.querySelector('#right');
      const left = document.querySelector('#left');
-     
+
      const sectionArticles = document.querySelector('.section-articles');
-   
+
 
      if (cont == list.length - lengthEnd) {
 
@@ -113,7 +113,7 @@ export const createSlider = (list) => {
 
      left.addEventListener('click', () => contSlider(`-${widthMov} `, list));
      right.addEventListener('click', () => contSlider(`${widthMov} `, list));
-   
+
 
 }
 

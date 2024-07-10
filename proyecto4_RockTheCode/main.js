@@ -14,14 +14,15 @@ const main = document.querySelector('main');
 main.className = 'flex-container';
 const header = document.createElement('header');
 document.body.insertBefore(header, main);
+const divTitle = document.createElement('div');
+divTitle.classList.add('div-title');
+divTitle.id = 'title-name';
+main.append(divTitle);
 const titleName = document.createElement('h1');
-titleName.id = 'title-name';
 titleName.innerText = 'Jose Manuel Sanchez';
-
+divTitle.append(titleName)
 
 createLogo(header, './logo-pasttri-svg.svg', 'logo-header','#title-name');
-
-main.append(titleName)
 
 createTitle(main, 'Sobre Mi', 'sobre-mi')
 createList(main, technology, 'technology');
