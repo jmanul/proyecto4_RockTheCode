@@ -136,30 +136,61 @@ header>ul a {
 @keyframes back {
 
   0% {
+    filter: drop-shadow(0px 0px 1px var(--vite));
+   
+  }
+
+  33% {
+
+    filter: drop-shadow(0px 0px 1px var(--css));
+   
+  }
+
+  66% {
+
+    filter: drop-shadow(0px 0px 1px var(--light-grey));
+   
+  }
+
+    100% {
+  
+      filter: drop-shadow(0px 0px 1px var(--vite));
+  
+    }
+}
+
+@keyframes show {
+
+  0% {
     filter: drop-shadow(0px -1px 3px var(--vite));
+   
 
   }
 
-  25% {
+  33% {
 
     filter: drop-shadow(0px -1px 3px var(--css));
+   
   }
 
-  75% {
+  66% {
 
     filter: drop-shadow(0px -1px 3px var(--light-grey));
+   
+
   }
 
   100% {
 
     filter: drop-shadow(0px -1px 3px var(--vite));
+
   }
 }
 
 .div-title {
 background: linear-gradient(0deg, rgba(65, 209, 255, 0.09) 10%, rgba(238, 162, 162, 0.000098005698005715) 50%);
   border-radius: 25px;
-  border-top:3px solid var(--vite);
+  border-top:2px solid var(--vite);
   max-width: 90%;
  height: max-content;
   margin-top: 270px;
@@ -178,10 +209,10 @@ h1 {
   color: transparent;
   background-clip: text;
   filter: drop-shadow(0px -1px 3px var(--vite));
-  box-shadow: 0px -15px 20px -20px var(--css);
+
   padding: 10px 40px;
   border-radius: 25px;
-  animation: back 4s linear infinite both;
+  animation: show 4s linear infinite both;
 
 }
 
@@ -391,14 +422,6 @@ footer {
 
   }
 
-    h1 {
-
-      background: var(--dark-grey);
-        -webkit-background-clip: text;
-        color: transparent;
-        background-clip: text;
-  
-    }
 }
 
 @media (min-width: 850px) {
@@ -446,7 +469,7 @@ footer {
   }
 
   header {
-    font-size: 18px;
+    font-size: 15px;
     min-height: 80px;
 
   }
