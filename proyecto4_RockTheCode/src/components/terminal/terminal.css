@@ -147,10 +147,10 @@
 
 .container-background {
 
-     border-right: var(--blue--light) 4px solid;
+     border-right: var(--css) 4px solid;
      border-left: var(--blue--light) 4px solid;
-     border-bottom: var(--blue--light) 4px solid;
-     box-shadow: 3px 2px 20px 0px var(--blue--light);
+     border-bottom: var(--css) 4px solid;
+     box-shadow: 3px 2px 20px 0px var(--css);
      width: 100%;
      height: 100%;
      border-radius: 10px;
@@ -222,6 +222,26 @@
           opacity: 1;
           background: var(--js);
      }
+
+}
+
+@media (max-width: 1050px) {
+
+     .icons-info img {
+              
+               opacity: 1;
+               border: 2px solid var(--css);
+     
+     
+     
+          }
+                    .top-info {
+                      
+                         border-top: var(--css) 1px solid;
+                        
+          
+                    }
+                 
 
 }
 

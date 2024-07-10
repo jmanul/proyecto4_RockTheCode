@@ -390,6 +390,15 @@ footer {
     max-width: 360px;
 
   }
+
+    h1 {
+
+      background: var(--dark-grey);
+        -webkit-background-clip: text;
+        color: transparent;
+        background-clip: text;
+  
+    }
 }
 
 @media (min-width: 850px) {

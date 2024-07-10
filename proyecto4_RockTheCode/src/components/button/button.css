@@ -85,7 +85,7 @@ button {
      width: max-content;
      box-shadow: inset 0px 0px 10px 0px var(--blue--light);
      border-radius: 10px;
-     border: 1px solid var(--terminal--screen);
+     border: 1px solid var(--css);
 }
 
 .button-square button {
