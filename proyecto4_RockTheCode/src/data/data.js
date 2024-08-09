@@ -52,6 +52,17 @@ export const proyects = [
           }, { icon: "/css.svg ", name: 'css' }],
           deploy: 'https://proyecto1-josemanuelsanchezballester.netlify.app',
           image: 'https://res.cloudinary.com/dn6utw1rl/image/upload/v1717785956/Captura_desde_2024-06-07_20-45-15_dgxouc.png'
+     },
+
+     {
+          id: 'games',
+          title: 'Games',
+          description: 'Este proyecto contiene tres juegos ( Ahorcado, Trivial y  Tres en Raya ) , esta realizado en Vite y JS Vanilla , haciendo uso de Local Storage para guardar la puntuación obtenida por el usuario en cada juego',
+          technologies: [{
+               icon: "/html.svg ", name: 'html'
+          }, { icon: "/css.svg", name: 'css' }, { icon: '/js.svg', name: 'js' }, { icon: '/vite.svg', name: 'vite' }],
+          deploy: 'https://main--proyecto5-jmanul.netlify.app/',
+          image: 'https://res.cloudinary.com/dn6utw1rl/image/upload/v1723229849/Captura_desde_2024-08-09_20-56-12_sv4pnh.png'
      }
 ]
 
